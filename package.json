@@ -14,5 +14,16 @@
     "nuxt": "^3.7.4",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "1.0.0-beta.27",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/google-fonts": "^3.0.2",
+    "@types/node": "^20.8.7",
+    "@types/three": "^0.157.2",
+    "@unocss/nuxt": "^0.56.5",
+    "@unocss/reset": "^0.56.5",
+    "@vueuse/nuxt": "^10.5.0",
+    "three": "^0.157.0"
   }
 }
