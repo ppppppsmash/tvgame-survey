@@ -41,7 +41,5 @@ useHead({
 </template>
 
 <style>
-:root {
-  font-family: 'Zen Maru Gothic', Inter;
-}
+
 </style>
