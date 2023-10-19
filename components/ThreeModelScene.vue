@@ -82,7 +82,7 @@ onMounted(async () => {
   renderer.setClearColor(new THREE.Color(0xE5E5E5))
   renderer.setSize(window.innerWidth, window.innerHeight)
   threeSceneRef.value.appendChild(renderer.domElement)
-  const imgPath = '/imgs/FbfB5CXakAAEr4T.jpg'
+  const imgPath = '/images/mydearbaby.jpg'
   const n = 20
   for (let i = 0; i < n; i++)
     await loadImage(imgPath, scene, i / n)

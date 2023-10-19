@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: [
     '@unocss/nuxt',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/eslint-module',
+    //'@nuxtjs/eslint-module',
     '@vueuse/nuxt',
   ],
   googleFonts: {

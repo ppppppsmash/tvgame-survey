@@ -24,7 +24,9 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <div class="w-[100vw] h-[100vh] relative bg-neutral-2">
+    <ThreeModelScene />
+
     <h1 class="absolute right-8 bottom-8 text-neutral-7">
       <div class="md:text-9xl font-black">
         xxxx
