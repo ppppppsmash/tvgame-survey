@@ -2,5 +2,16 @@
 </script>
 
 <template>
-  <div>トップ</div>
+  <div class="w-[100vw] h-[100vh] relative bg-neutral-2">
+    <ThreeModelScene />
+
+    <h1 class="absolute right-8 bottom-8 text-neutral-7">
+      <div class="md:text-9xl font-black">
+        Webcrew
+      </div>
+      <div class="md:text-7xl md:px-1">
+        アンケート
+      </div>
+    </h1>
+  </div>
 </template>
