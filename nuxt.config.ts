@@ -1,11 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  css: [
+    '@/assets/css/tailwind.css'
+  ],
   modules: [
-    '@unocss/nuxt',
     '@nuxtjs/google-fonts',
-    //'@nuxtjs/eslint-module',
     '@vueuse/nuxt',
+    '@nuxtjs/tailwindcss'
   ],
   googleFonts: {
     prefetch: true,
@@ -15,9 +17,6 @@ export default defineNuxtConfig({
     families: {
       'Inter': true,
       'Zen Maru Gothic': true,
-    },
-  },
-  eslint: {
-    lintOnStart: false,
-  },
+    }
+  }
 })
