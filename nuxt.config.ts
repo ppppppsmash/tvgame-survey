@@ -18,5 +18,11 @@ export default defineNuxtConfig({
       'Inter': true,
       'Zen Maru Gothic': true,
     }
-  }
+  },
+  experimental: {
+    /**
+     * see: https://v3.nuxtjs.org/api/configuration/nuxt.config#inlinessrstyles
+     */
+    inlineSSRStyles: false
+  },
 })
