@@ -13,5 +13,7 @@
         ゲーム会開催終了後アンケート
       </div>
     </h1>
+
+    <ScrollButton />
   </div>
 </template>
