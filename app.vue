@@ -1,6 +1,4 @@
 <script setup>
-import '@unocss/reset/tailwind.css'
-
 useSeoMeta({
   title: 'ウェブクルー ゲーム大会 感想アンケート',
   description: 'ウェブクルー ゲーム大会 感想アンケート, Created by liming.pei',
@@ -25,7 +23,9 @@ useHead({
 
 <template>
   <naive-config>
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </naive-config>
 </template>
 

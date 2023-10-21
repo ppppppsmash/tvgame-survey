@@ -26,4 +26,7 @@ export default defineNuxtConfig({
      */
     inlineSSRStyles: false
   },
+  tailwindcss: {
+    exposeConfig: true
+  }
 })

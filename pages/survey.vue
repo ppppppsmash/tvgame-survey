@@ -1,9 +1,15 @@
 <script setup>
-
+definePageMeta({
+  layout: 'survey'
+})
 </script>
 
 <template>
-  <div class="animate-slide-in-bottom bg-[#000000]">
-    <h2>survey</h2>
+  <div>
+    <n-form>
+      <n-form-item>
+        <n-input />
+      </n-form-item>
+    </n-form>
   </div>
 </template>
