@@ -4,12 +4,15 @@ const { addClass } = toRefs(props)
 </script>
 
 <template>
-  <div :class="addClass">
+  <div
+    :class="addClass"
+    class="px-4"
+  >
     <h1 class="text-neutral-7">
-      <div class="md:text-9xl font-black text-primary">
+      <div class="text-3xl sm:text-8xl font-black text-primary">
         Webcrew
       </div>
-      <div class="md:text-5xl md:px-1 text-secondary font-bold">
+      <div class="text-lg sm:text-4xl md:px-1 text-secondary font-bold">
         ゲーム会開催終了後アンケート
       </div>
     </h1>

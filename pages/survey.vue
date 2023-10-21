@@ -5,11 +5,9 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
-    <n-form>
-      <n-form-item>
-        <n-input />
-      </n-form-item>
-    </n-form>
+  <div class="py-10">
+
+    <FormCard />
+
   </div>
 </template>
