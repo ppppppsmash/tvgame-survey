@@ -24,7 +24,9 @@ useHead({
 </script>
 
 <template>
-  <NuxtPage />
+  <naive-config>
+    <NuxtPage />
+  </naive-config>
 </template>
 
 <style>

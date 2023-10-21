@@ -7,7 +7,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/google-fonts',
     '@vueuse/nuxt',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@bg-dev/nuxt-naiveui',
   ],
   googleFonts: {
     prefetch: true,
