@@ -20,7 +20,8 @@ export default {
       animation: {
         'scroll-move-default': 'move 3s ease-out infinite',
         'scroll-move-primary': 'move 3s ease-out 1s infinite',
-        'scroll-move-secondary': 'move 3s ease-out 2s infinite'
+        'scroll-move-secondary': 'move 3s ease-out 2s infinite',
+        'slide-in-bottom': 'slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both'
       },
       keyframes: {
         'move': {
@@ -38,6 +39,16 @@ export default {
           '100%': {
             opacity: '0',
             transform: 'translateY(55px) scale3d(0.5, 0.5, 0.5)'
+          }
+        },
+        'slide-in-bottom': {
+          '0%': {
+              transform: 'translateY(1000px)',
+              opacity: '0'
+          },
+          to: {
+              transform: 'translateY(0)',
+              opacity: '1'
           }
         }
       }
