@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
     '@/assets/css/tailwind.css',
-    //'quasar/dist/quasar.prod.css',
     '@quasar/extras/material-icons/material-icons.css'
   ],
   modules: [
