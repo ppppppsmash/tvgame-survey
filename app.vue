@@ -1,4 +1,12 @@
 <script setup>
+import { NConfigProvider } from 'naive-ui'
+
+const themeOverrides = {
+  common: {
+    primaryColor: '#0B2F8F'
+  }
+}
+
 useSeoMeta({
   title: 'ウェブクルー ゲーム大会 感想アンケート',
   description: 'ウェブクルー ゲーム大会 感想アンケート, Created by liming.pei',
@@ -22,7 +30,7 @@ useHead({
 </script>
 
 <template>
-  <NaiveConfig>
+  <NaiveConfig :theme-overrides="themeOverrides">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
