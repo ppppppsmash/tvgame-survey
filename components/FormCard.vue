@@ -62,11 +62,13 @@ async function handleSubmit() {
     :rules="rules"
     :model="model"
     @submit.prevent="() => onSubmit(handleSubmit)"
+    class="font-murecho"
   >
     <n-gradient-text
-      class="sm:text-2xl text-primary mb-4"
+      class="sm:text-xl text-primary mb-4 flex items-end font-murecho font-semibold"
     >
-      どの部屋で遊びましたか。（複数回答可）
+      どの部屋で遊びましたか？
+      <p class="text-xs flex items-end text-secondary"><span class="text-required text-sm block font-murecho">*</span>複数回答可</p>
     </n-gradient-text>
 
     <n-checkbox-group>
@@ -75,24 +77,28 @@ async function handleSubmit() {
           <n-checkbox
             value="マリオカート部屋"
             label="マリオカート部屋"
+            class="font-murecho"
           />
         </n-gi>
         <n-gi>
           <n-checkbox
             value="スマブラ（ガチ部屋）"
             label="スマブラ（ガチ部屋）"
+            class="font-murecho"
           />
         </n-gi>
         <n-gi>
           <n-checkbox
             value="スマブラ（エンジョイ部屋）"
             label="スマブラ（エンジョイ部屋）"
+            class="font-murecho"
           />
         </n-gi>
         <n-gi>
           <n-checkbox
             value="マリオパーティー部屋"
             label="マリオパーティー部屋"
+            class="font-murecho"
           />
         </n-gi>
       </n-grid>

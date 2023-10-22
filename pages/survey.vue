@@ -7,6 +7,8 @@ definePageMeta({
 <template>
   <div class="py-10">
 
+    <MessageCard />
+
     <FormCard />
 
   </div>

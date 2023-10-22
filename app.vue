@@ -22,7 +22,7 @@ useHead({
 </script>
 
 <template>
-  <NaiveConfig :theme-config="themeConfig">
+  <NaiveConfig>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

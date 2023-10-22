@@ -8,7 +8,7 @@ const { addClass } = toRefs(props)
     :class="addClass"
     class="px-4"
   >
-    <h1 class="text-neutral-7">
+    <h1 class="text-neutral-7 animate-text-focus-in">
       <div class="text-3xl sm:text-8xl font-black text-primary">
         Webcrew
       </div>

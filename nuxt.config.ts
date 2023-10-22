@@ -18,6 +18,8 @@ export default defineNuxtConfig({
     families: {
       'Inter': true,
       'Zen Maru Gothic': true,
+      'Mochiy Pop One': true,
+      'Murecho': true,
     }
   },
   experimental: {
