@@ -1,63 +1,43 @@
 <script setup>
-import { useNaiveForm, ref } from "#imports"
-
-const model = ref({
-    // email: "bcem.sd@gls.cp",
-    // password: "qsd",
-})
-
-const { formRef, rules, pending, apiErrors, edited, reset, onSubmit } = useNaiveForm(model)
-
-apiErrors.value = {
-  wrongCredentials: false,
-  invalidProvider: false,
-  accountNotVerified: false,
-  accountSuspended: false
-}
-
-rules.value = {
-  email: [
-    {
-      required: true,
-      message: "Please input your email",
-      trigger: "blur",
-    },
-    {
-      message: "Wrong credentials",
-      validator: () => !apiErrors.value.wrongCredentials
-    },
-    {
-      message: "Your account is not verified",
-      validator: () => !apiErrors.value.accountNotVerified
-    },
-    {
-      message: "Your account is suspended",
-      validator: () => !apiErrors.value.accountSuspended
-    }
-  ],
-  password: [
-    {
-      required: true,
-      message: "Please input your password",
-      trigger: "blur",
-    },
-  ],
-}
-
-async function handleSubmit() {
-  await $fetch("https://jsonplaceholder.typicode.com/posts", {
-    method: "POST",
-    body: {
-        title: 'foo',
-        body: 'bar',
-        userId: 1,
-    }
-  })
-}
+const test = ref(false)
 </script>
 
 <template>
-  <n-form
+  <q-layout view="hHh lpR fFf">
+    <q-page-container>
+      <div class="q-pa-md">
+        <div class="q-qutter-sm">
+          <q-checkbox
+            size="md"
+            val="マリオカート部屋"
+            label="マリオカート部屋"
+            color="primary"
+            v-model="test"
+          />
+          <q-checkbox
+            size="md"
+            val="スマブラ（ガチ部屋）"
+            label="スマブラ（ガチ部屋）"
+            color="primary"
+          />
+          <q-checkbox
+            size="md"
+            val="スマブラ（エンジョイ部屋）"
+            label="スマブラ（エンジョイ部屋）"
+            color="primary"
+          />
+          <q-checkbox
+            size="md"
+            val="マリオパーティー部屋"
+            label="マリオパーティー部屋"
+            color="primary"
+          />
+        </div>
+      </div>
+    </q-page-container>
+  </q-layout>
+
+  <!-- <n-form
     ref="formRef"
     :rules="rules"
     :model="model"
@@ -187,5 +167,5 @@ async function handleSubmit() {
         placeholder="入力してください."
       />
     </div>
-  </n-form>
+  </n-form> -->
 </template>

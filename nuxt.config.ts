@@ -2,14 +2,27 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
-    '@/assets/css/tailwind.css'
+    '@/assets/css/tailwind.css',
+    //'quasar/dist/quasar.prod.css',
+    '@quasar/extras/material-icons/material-icons.css'
   ],
   modules: [
     '@nuxtjs/google-fonts',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
-    '@bg-dev/nuxt-naiveui',
+    [
+      'nuxt-quasar-ui', {
+        config: {
+          brand: {
+            'primary': '#0B2F8F',
+            'secondary': '#696969',
+          },
+        }
+      }
+    ]
   ],
+  quasar: {
+  },
   googleFonts: {
     prefetch: true,
     preconnect: true,
