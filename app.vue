@@ -30,11 +30,9 @@ useHead({
 </script>
 
 <template>
-  <NaiveConfig :theme-overrides="themeOverrides">
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </NaiveConfig>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
 <style>
