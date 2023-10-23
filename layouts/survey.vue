@@ -2,22 +2,13 @@
 </script>
 
 <template>
-  <div class="animate-slide-in-bottom bg-brand/30 area h-screen">
-    <ul class="circles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+  <div class="flex items-center justify-center animate-slide-in-bottom bg-brand/30 h-screen">
 
-    <Header addClass="relative" />
-    <main class="w-full sm:w-8/12 sm:mx-auto px-4">
+    <Header addClass="absolute top-0 left-0 z-50" />
+
+    <AnimationBg />
+
+    <main class="relative z-50">
       <slot />
     </main>
   </div>
