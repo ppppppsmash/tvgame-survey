@@ -5,11 +5,9 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="">
+  <div>
 
     <MessageCard />
-
-    <FormCard />
 
   </div>
 </template>
