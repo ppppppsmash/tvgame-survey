@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         config: {
           brand: {
             'primary': '#0B2F8F',
-            'secondary': '#696969',
+            'secondary': '#D5D5D5',
           },
         }
       }

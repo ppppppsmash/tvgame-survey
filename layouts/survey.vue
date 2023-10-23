@@ -16,9 +16,7 @@
       <li></li>
     </ul>
 
-    <Header
-      addClass="relative sm:ml-6"
-    />
+    <Header addClass="relative" />
     <main class="w-full sm:w-8/12 sm:mx-auto px-4">
       <slot />
     </main>
@@ -27,7 +25,6 @@
 
 <style>
 .area {
-  background: #E5E5E5;  
   width: 100%;
   height: 100%;
 }

@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="py-10">
+  <div class="py-10 h-[89vh]">
 
     <MessageCard />
 

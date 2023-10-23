@@ -9,10 +9,10 @@ const { addClass } = toRefs(props)
     class="px-4"
   >
     <h1 class="animate-text-focus-in">
-      <div class="text-3xl sm:text-8xl font-black text-primary">
+      <div class="text-3xl sm:text-6xl font-black text-primary">
         WebCrew
       </div>
-      <div class="text-lg sm:text-4xl md:px-1 text-secondary font-black">
+      <div class="text-lg sm:text-2xl md:px-1 text-secondary font-black">
         ゲーム会終了後アンケート
       </div>
     </h1>
