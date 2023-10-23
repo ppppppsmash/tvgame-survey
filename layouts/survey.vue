@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="animate-slide-in-bottom bg-brand/30 area">
+  <div class="animate-slide-in-bottom bg-brand/30 area h-screen">
     <ul class="circles">
       <li></li>
       <li></li>
