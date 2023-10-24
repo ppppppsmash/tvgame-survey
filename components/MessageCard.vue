@@ -36,10 +36,10 @@ const simulateProgress = () => {
       <button
         :loading="loading"
         @click="simulateProgress"
-        class="w-[70px] h-[40px] bg-primary text-white rounded-none"
+        class="w-[70px] h-[40px] bg-white text-white rounded-none"
       >
-        <span class="font-black">
-          次へ
+        <span class="font-black text-primary">
+          NEXT
         </span>
       </button>
     </div>

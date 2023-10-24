@@ -11,7 +11,8 @@ export default {
   theme: {
     colors: {
       primary: '#0B2F8F',
-      secondary: '#696969',
+      secondary: '#FFFFFF',
+      tertiary: '#313640',
       brand: '#E5E5E5',
       required: '#DC2626',
     },
