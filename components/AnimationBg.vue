@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="absolute sm:-top-[460px] left-0 w-full sm:h-screen z-10">
+  <div class="absolute overflow-hidden left-0 w-full sm:h-screen z-10 backdrop-blur-md bg-black">
     <div id="bg-wrap">
       <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
       <defs>

@@ -21,6 +21,7 @@ export default {
         gothic: ['Zen Maru Gothic'],
         mochiy: ['Mochiy Pop One'],
         murecho: ['Murecho'],
+        default: ['Noto Sans JP']
       },
       skew: {
         '30': '30deg'
