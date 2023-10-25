@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="text-white">
-    テスト
+  <div>
+    <slot />
   </div>
 </template>

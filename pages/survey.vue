@@ -2,9 +2,10 @@
 definePageMeta({
   layout: 'survey'
 })
-const props = defineProps(['handle_next'])
-const { handle_next } = toRefs(props)
 
+import { formConfig } from '~/config/formConfig'
+
+console.log(formConfig)
 </script>
 
 <template>
@@ -12,10 +13,7 @@ const { handle_next } = toRefs(props)
 
     <MessageCard />
 
-    <FormCard>
-      <QuestionElement />
-    </FormCard>
-
+    <FormCard />
 
   </div>
 </template>
