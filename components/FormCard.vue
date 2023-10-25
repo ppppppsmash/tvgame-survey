@@ -1,6 +1,10 @@
-<script setup lang="ts">
-import { onMounted, ref } from 'vue'
-
+<script setup>
+const props = defineProps({
+  formField: {
+    type: Array,
+    default: () => []
+  }
+})
 const form = ref({
   rooms: [],
   like: '',
@@ -11,7 +15,14 @@ const form = ref({
 </script>
 
 <template>
-  <div>
-    form
-  </div>
+  <form>
+    <template
+      v-for="(field, index) in formField"
+      :key="index"
+    >
+      <FormElementsField>
+        <p>テストテスト</p>
+      </FormElementsField>
+    </template>
+  </form>
 </template>
