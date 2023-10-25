@@ -11,7 +11,7 @@ const form = ref({
 </script>
 
 <template>
-  <div>
-    form
+  <div class="bg-black">
+    <slot />
   </div>
 </template>
