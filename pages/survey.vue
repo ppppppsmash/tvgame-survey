@@ -1,11 +1,10 @@
 <script setup>
+import { formConfig } from '~/config/formConfig'
+
 definePageMeta({
   layout: 'survey'
 })
 
-import { formConfig } from '~/config/formConfig'
-
-console.log(formConfig)
 </script>
 
 <template>
@@ -13,7 +12,7 @@ console.log(formConfig)
 
     <MessageCard />
 
-    <FormCard />
+    <FormCard :formConfig="formConfig" />
 
   </div>
 </template>

@@ -1,27 +1,31 @@
 <script setup>
+import { getValue } from '~/utils/'
 const props = defineProps({
-  formField: {
+  formConfig: {
     type: Array,
     default: () => []
   }
 })
-const form = ref({
-  rooms: [],
-  like: '',
-  feedback: '',
-  event: '',
-  name: ''
-})
+
+const getLabel = (key, field) => {
+  return {key, ...getValue(field, ['label'])}
+}
+
+const getFormValue = (key, field) => {
+  return {key, ...getValue(field, ['type', 'options'])}
+}
+
 </script>
 
 <template>
-  <form>
+  <form class="hidden">
     <template
-      v-for="(field, index) in formField"
+      v-for="(field, index) in formConfig"
       :key="index"
     >
       <FormElementsField>
-        <p>テストテスト</p>
+        <FormElementsLabel :props="getLabel(key, field)" />
+        <FormElementsCheckBox :props="getFormValue(key, field)" />
       </FormElementsField>
     </template>
   </form>
