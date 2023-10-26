@@ -16,7 +16,7 @@ watchEffect(() => {
   if (!isShow.value) {
     setTimeout(() => {
       router.push({ path: '/greeting'})
-    })
+    }, 1000)
   }
 })
 </script>
