@@ -4,6 +4,8 @@
 <template>
   <div class="bg-tertiary overflow flex items-center justify-center animate-slide-in-bottom h-screen">
 
+    <HeroBg />
+
     <Header
       addClass="absolute top-0 left-0 z-50 text-primary"
     />
