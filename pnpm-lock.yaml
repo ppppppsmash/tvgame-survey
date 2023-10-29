@@ -55,6 +55,9 @@ devDependencies:
   '@nuxtjs/tailwindcss':
     specifier: ^6.8.0
     version: 6.8.0(webpack@5.89.0)
+  laser-pen:
+    specifier: ^1.0.0
+    version: 1.0.0
   nuxt:
     specifier: ^3.7.4
     version: 3.7.4(@types/node@20.8.7)(eslint@8.51.0)(stylus@0.60.0)(typescript@5.2.2)
@@ -5772,6 +5775,10 @@ packages:
 
   /kolorist@1.8.0:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
+
+  /laser-pen@1.0.0:
+    resolution: {integrity: sha512-skXczZoLKEN8ut6hz9dRSx025bx83tYlP7c2DhxLhAwzmjJL8w9m3lU0OHkrMYLUX8zwAyfhehz9xHVbpA3zIg==}
+    dev: true
 
   /launch-editor@2.6.1:
     resolution: {integrity: sha512-eB/uXmFVpY4zezmGp5XtU21kwo7GBbKB+EQ+UZeWtGb9yAM5xt/Evk+lYH3eRNAtId+ej4u7TYPFZ07w4s7rRw==}
