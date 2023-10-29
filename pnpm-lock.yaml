@@ -29,6 +29,9 @@ dependencies:
   '@unocss/reset':
     specifier: ^0.56.5
     version: 0.56.5
+  '@vueuse/core':
+    specifier: ^10.5.0
+    version: 10.5.0(vue@3.3.4)
   '@vueuse/nuxt':
     specifier: ^10.5.0
     version: 10.5.0(nuxt@3.7.4)(vue@3.3.4)
