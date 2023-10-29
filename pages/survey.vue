@@ -2,7 +2,7 @@
 import { formConfig } from '~/config/formConfig'
 
 definePageMeta({
-  layout: 'survey'
+  layout: 'survey-layout'
 })
 
 </script>
