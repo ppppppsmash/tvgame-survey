@@ -32,7 +32,7 @@ const rootClass = computed(() => {
   <div class="gradient-overlay"></div>
   <div class="dotted-layer">
     <client-only>
-      <mouse-trail-sketch></mouse-trail-sketch>
+      <MouseTrailSketch />
     </client-only>
     <div class="muted-dots"></div>
   </div>
@@ -50,14 +50,6 @@ const rootClass = computed(() => {
     </div>
   </div>
 </div>
-
-<t-pane title="Overview">
-  <t-folder title="Hero Blobs">
-    <t-input v-model="params.movementDuration" name="moveDuration" :opt-params="{ min: 1, max: 100 }"></t-input>
-    <t-input v-model="params.parallaxFactor" name="parallaxFactor" :opt-params="{ min: 0.1, max: 1 }"></t-input>
-    <t-input v-model="params.enableBlur" name="enableBlur"></t-input>
-  </t-folder>
-</t-pane>
 </template>
 
 <style lang="stylus">
@@ -83,7 +75,7 @@ const rootClass = computed(() => {
 
   .dotted-layer
     --backgroud: red
-    --dot: #EAEAEA
+    --dot: #656565
     z-index: 23
     mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 44%, transparent 90%)
 
@@ -99,7 +91,7 @@ const rootClass = computed(() => {
       height: 1674px
 
     /html.dark &
-      --dot: #656565
+      --dot: #EAEAEA
 
   .blobs-container
     height: 1200px
@@ -110,12 +102,11 @@ const rootClass = computed(() => {
 
   .blur-layer
     z-index: 10
-    background: $secondary10;
+    background: rgba(0, 0, 0, 0.1)
     backdrop-filter: blur(150px)
     backface-visibility: hidden
     height: 1600px
     mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 80%, transparent 90%)
-    // mix-blend-mode: multiply
 
   @keyframes movement1
     from
@@ -181,7 +172,7 @@ const rootClass = computed(() => {
     transform-origin: 55% 55%
 
   .ellipse-1
-    top: 0px
+    top: 0
     right: 20px
     width: 500px
     height: 531px
@@ -211,9 +202,9 @@ const rootClass = computed(() => {
       animation: morph2 4s linear infinite alternate, spin 14s linear infinite reverse
 
   .gradient-overlay
-    z-index: 233
+    z-index: 9999
     height: 2619px
-    background: linear-gradient(180deg, #FFFFFF 4.32%, rgba(255, 255, 255, 0) 70.08%, #FFFFFF 88.49%);
+    background: linear-gradient(180deg, #000000 4.32%, rgba(0, 0, 0, 0.65) 50.97%, #000000 88.49%);
 
     /html.dark &
       height: 1691px
