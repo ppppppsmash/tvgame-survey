@@ -3,7 +3,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
     '@/assets/css/tailwind.css',
-    '@quasar/extras/material-icons/material-icons.css'
+    '@quasar/extras/material-icons/material-icons.css',
+    {
+      src: '@/assets/css/styles.styl', lang: 'styl'
+    }
   ],
   modules: [
     '@nuxtjs/google-fonts',
@@ -20,8 +23,6 @@ export default defineNuxtConfig({
       }
     ]
   ],
-  quasar: {
-  },
   googleFonts: {
     prefetch: true,
     preconnect: true,
