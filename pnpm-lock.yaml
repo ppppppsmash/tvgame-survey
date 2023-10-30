@@ -35,6 +35,9 @@ dependencies:
   '@vueuse/nuxt':
     specifier: ^10.5.0
     version: 10.5.0(nuxt@3.7.4)(vue@3.3.4)
+  laser-pen:
+    specifier: ^1.0.0
+    version: 1.0.0
   quasar:
     specifier: ^2.13.0
     version: 2.13.0
@@ -55,9 +58,6 @@ devDependencies:
   '@nuxtjs/tailwindcss':
     specifier: ^6.8.0
     version: 6.8.0(webpack@5.89.0)
-  laser-pen:
-    specifier: ^1.0.0
-    version: 1.0.0
   nuxt:
     specifier: ^3.7.4
     version: 3.7.4(@types/node@20.8.7)(eslint@8.51.0)(stylus@0.60.0)(typescript@5.2.2)
@@ -5778,7 +5778,7 @@ packages:
 
   /laser-pen@1.0.0:
     resolution: {integrity: sha512-skXczZoLKEN8ut6hz9dRSx025bx83tYlP7c2DhxLhAwzmjJL8w9m3lU0OHkrMYLUX8zwAyfhehz9xHVbpA3zIg==}
-    dev: true
+    dev: false
 
   /launch-editor@2.6.1:
     resolution: {integrity: sha512-eB/uXmFVpY4zezmGp5XtU21kwo7GBbKB+EQ+UZeWtGb9yAM5xt/Evk+lYH3eRNAtId+ej4u7TYPFZ07w4s7rRw==}
