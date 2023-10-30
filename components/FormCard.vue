@@ -30,6 +30,8 @@ const getFormValue = (key, field) => {
   return {key, ...getValue(field, ['name', 'type', 'text', 'options', 'label'])}
 }
 
+const isShow = ref(false)
+
 </script>
 
 <template>

@@ -54,7 +54,7 @@ export const formConfig = [
     type: 'text',
     label: '名前（省略可）',
     name: '',
-    buttonText: 'NEXT',
+    buttonText: 'SEND',
     options: {
       attrs: {
         placeholder: '入力...'
