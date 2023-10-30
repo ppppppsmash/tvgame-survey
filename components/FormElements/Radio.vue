@@ -6,11 +6,11 @@ defineProps({
   }
 })
 
-const rooms = ref([])
+const satisfaction = ref('')
 
 const isShow = ref(false)
 watchEffect(() => {
-  isShow.value = rooms.value.length ? true : false
+  isShow.value = satisfaction.value ? true : false
 })
 
 </script>
@@ -30,7 +30,7 @@ watchEffect(() => {
         <input
           :type="props.type"
           :value="choice"
-          v-model="rooms"
+          v-model="satisfaction"
         />
         <span class="text-xl">{{ choice }}</span>
       </div>

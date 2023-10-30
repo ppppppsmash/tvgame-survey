@@ -1,7 +1,7 @@
 <script setup>
 const loading = ref(false)
 
-const isMessageShow = ref(true)
+const isMessageShow = ref(false)
 const handleNext = () => {
   isMessageShow.value = !isMessageShow
 }

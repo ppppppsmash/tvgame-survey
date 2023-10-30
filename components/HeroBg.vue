@@ -74,7 +74,6 @@ const rootClass = computed(() => {
     width: 100%
 
   .dotted-layer
-    --backgroud: red
     --dot: #656565
     z-index: 23
     mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 44%, transparent 90%)
@@ -89,9 +88,6 @@ const rootClass = computed(() => {
       background-image: radial-gradient(var(--dot) 2px, transparent 2px)
       background-size: 30px 30px
       height: 1674px
-
-    /html.dark &
-      --dot: #EAEAEA
 
   .blobs-container
     height: 1200px
@@ -202,7 +198,7 @@ const rootClass = computed(() => {
       animation: morph2 4s linear infinite alternate, spin 14s linear infinite reverse
 
   .gradient-overlay
-    z-index: 9999
+    z-index: 240
     height: 2619px
     background: linear-gradient(180deg, #000000 4.32%, rgba(0, 0, 0, 0.65) 50.97%, #000000 88.49%);
 
