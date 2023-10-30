@@ -1,4 +1,6 @@
 <script setup>
+import { useFormStore } from '~/stores/form'
+
 defineProps({
   props: {
     type: Object,
@@ -6,11 +8,11 @@ defineProps({
   }
 })
 
-const satisfaction = ref('')
+const formStore = useFormStore()
 
 const isShow = ref(false)
 watchEffect(() => {
-  isShow.value = satisfaction.value ? true : false
+  isShow.value = formStore.satisfaction ? true : false
 })
 
 </script>

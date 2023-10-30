@@ -3,9 +3,16 @@ import { defineStore } from 'pinia'
 export const useFormStore = defineStore('form', {
   state: () => ({
     rooms: [],
-    atisfaction: '',
+    roomsShow: true,
+    roomsCheck: false,
+    satisfaction: '',
+    satisfactionCheck: false,
     feedback: '',
+    feedbackCheck: false,
     event: '',
-    name: ''
-  })
+    eventCheck: false,
+    name: '',
+    nameCheck: false
+  }),
+  persist: true
 })

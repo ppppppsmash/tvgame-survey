@@ -1,4 +1,6 @@
 <script setup>
+import { useFormStore } from '~/stores/form'
+
 defineProps({
   props: {
     type: Object,
@@ -6,17 +8,23 @@ defineProps({
   }
 })
 
-const rooms = ref([])
+const formStore = useFormStore()
 
 const isShow = ref(false)
+
 watchEffect(() => {
-  isShow.value = rooms.value.length ? true : false
+  isShow.value = formStore.rooms.length ? true : false
 })
+
+const handleNext = () => {
+  formStore.roomsCheck = true
+  formStore.roomsShow = false
+}
 
 </script>
 
 <template>
-  <div>
+  <div v-if="formStore.roomsShow">
     <label>
       <h5 class="text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
     </label>
@@ -30,7 +38,7 @@ watchEffect(() => {
         <input
           :type="props.type"
           :value="choice"
-          v-model="rooms"
+          v-model="formStore.rooms"
         />
         <span class="text-xl">{{ choice }}</span>
       </div>
