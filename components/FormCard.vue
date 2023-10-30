@@ -9,6 +9,14 @@ const props = defineProps({
   }
 })
 
+const formValue = ref({
+  rooms: [],
+  satisfaction: '',
+  feedback: '',
+  event: '',
+  name: ''
+})
+
 const formFields = props.formConfig.map((field) => {
   let component = getComponent(field.type)
   return { ...field, component }
@@ -26,27 +34,22 @@ const getFormValue = (key, field) => {
 
 <template>
   <form class="text-white">
-    <FormElementsLabel :props="formConfig[0]" />
     <FormElementsCheckBox
       :props="formConfig[0]"
     />
 
-    <FormElementsLabel :props="formConfig[1]" />
     <FormElementsRadio
       :props="formConfig[1]"
     />
 
-    <FormElementsLabel :props="formConfig[2]" />
     <FormElementsInput
       :props="formConfig[2]"
     />
 
-    <FormElementsLabel :props="formConfig[3]" />
     <FormElementsInput
       :props="formConfig[3]"
     />
 
-    <FormElementsLabel :props="formConfig[4]" />
     <FormElementsInput
       :props="formConfig[4]"
     />
