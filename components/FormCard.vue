@@ -1,7 +1,5 @@
 <script setup>
 import { useFormStore } from '~/stores/form'
-import { getValue } from '~/utils/'
-import { getComponent } from '~/components/FormElements/ComponentType'
 const router = useRouter()
 
 const props = defineProps({
@@ -27,30 +25,6 @@ const reset = () => {
   formStore.nameCheck = false
   router.push({ path: '/survey' })
 }
-
-const handleNext = (prevCheck, nextCheck) => {
-  prevCheck = true
-  nextCheck = false
-  // console.log(prevCheck, nextCheck)
-  // formStore.feedbackCheck = true
-  // formStore.satisfactionCheck = false
-}
-
-const formFields = props.formConfig.map((field) => {
-  let component = getComponent(field.type)
-  return { ...field, component }
-})
-
-const getLabel = (key, field) => {
-  return {key, ...getValue(field, ['label'])}
-}
-
-const getFormValue = (key, field) => {
-  return {key, ...getValue(field, ['name', 'type', 'text', 'options', 'label'])}
-}
-
-const isShow = ref(false)
-
 </script>
 
 <template>
@@ -89,7 +63,5 @@ const isShow = ref(false)
         :props="formConfig[4]"
       />
     </div>
-
-    
   </form>
 </template>
