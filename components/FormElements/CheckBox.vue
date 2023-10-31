@@ -11,7 +11,6 @@ defineProps({
 const formStore = useFormStore()
 
 const isShow = ref(false)
-
 watchEffect(() => {
   isShow.value = formStore.rooms.length ? true : false
 })
@@ -20,13 +19,14 @@ const handleNext = () => {
   formStore.roomsCheck = true
   formStore.roomsShow = false
 }
-
 </script>
 
 <template>
-  <div v-if="formStore.roomsShow">
+  <div
+    v-if="formStore.roomsShow"
+  >
     <label>
-      <h5 class="text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
+      <h5 class="font-rampart text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
     </label>
 
     <div class="my-8">
