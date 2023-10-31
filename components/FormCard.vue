@@ -1,7 +1,5 @@
 <script setup>
 import { useFormStore } from '~/stores/form'
-import { getValue } from '~/utils/'
-import { getComponent } from '~/components/FormElements/ComponentType'
 const router = useRouter()
 
 const props = defineProps({
@@ -14,6 +12,8 @@ const props = defineProps({
 const formStore = useFormStore()
 
 const reset = () => {
+  formStore.messageCheck = true
+  formStore.formCheck = false
   formStore.roomsShow = true
   formStore.rooms = []
   formStore.roomsCheck = false
@@ -27,41 +27,10 @@ const reset = () => {
   formStore.nameCheck = false
   router.push({ path: '/survey' })
 }
-
-const handleNext = (prevCheck, nextCheck) => {
-  prevCheck = true
-  nextCheck = false
-  // console.log(prevCheck, nextCheck)
-  // formStore.feedbackCheck = true
-  // formStore.satisfactionCheck = false
-}
-
-const formFields = props.formConfig.map((field) => {
-  let component = getComponent(field.type)
-  return { ...field, component }
-})
-
-const getLabel = (key, field) => {
-  return {key, ...getValue(field, ['label'])}
-}
-
-const getFormValue = (key, field) => {
-  return {key, ...getValue(field, ['name', 'type', 'text', 'options', 'label'])}
-}
-
-const isShow = ref(false)
-
 </script>
 
 <template>
   <form class="text-white w-full">
-    <button
-      type="button"
-      @click="reset"
-    >
-      リセット
-    </button>
-
     <FormElementsCheckBox
       :props="formConfig[0]"
     />
@@ -89,7 +58,15 @@ const isShow = ref(false)
         :props="formConfig[4]"
       />
     </div>
-
-    
   </form>
+
+  <button
+    class="absolute -bottom-20 right-0 w-[70px] h-[40px] bg-white text-white rounded-none"
+    type="button"
+    @click="reset"
+  >
+    <span class="font-black text-primary">
+      リセット
+    </span>
+  </button>
 </template>

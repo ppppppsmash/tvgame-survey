@@ -1,9 +1,3 @@
-<template>
-<div>
-  <canvas class="mouse-trail-sketch" ref="canvasRef"></canvas>
-</div>
-</template>
-
 <script setup lang="ts">
 import { useResizeObserver } from '@vueuse/core'
 import type { IOriginalPointData } from 'laser-pen'
@@ -14,6 +8,7 @@ import {
   setOpacity,
   setColor,
   setRoundCap,
+
   drainPoints,
   drawLaserPen,
 } from 'laser-pen'
@@ -77,7 +72,6 @@ const handleMousemove = (event: MouseEvent) => {
   const relativeY = event.pageY - canvasPos.y
 
   if (relativeY > canvasPos.height) {
-    console.log(relativeY)
     return
   }
 
@@ -119,6 +113,12 @@ onUnmounted(() => {
   document.removeEventListener('mousemove', handleMousemove)
 })
 </script>
+
+<template>
+<div>
+  <canvas class="mouse-trail-sketch" ref="canvasRef"></canvas>
+</div>
+</template>
 
 <style lang="stylus">
 .mouse-trail-sketch
