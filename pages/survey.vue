@@ -1,5 +1,8 @@
 <script setup>
+import { useFormStore } from '~/stores/form'
 import { formConfig } from '~/config/formConfig'
+
+const formStore = useFormStore()
 
 definePageMeta({
   layout: 'survey-layout'
@@ -12,7 +15,9 @@ definePageMeta({
 
     <MessageCard />
 
-    <FormCard :formConfig="formConfig" />
+    <div v-if="formStore.formCheck">
+      <FormCard :formConfig="formConfig" />
+    </div>
 
   </div>
 </template>

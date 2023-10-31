@@ -12,6 +12,8 @@ const props = defineProps({
 const formStore = useFormStore()
 
 const reset = () => {
+  formStore.messageCheck = true
+  formStore.formCheck = false
   formStore.roomsShow = true
   formStore.rooms = []
   formStore.roomsCheck = false
@@ -29,13 +31,6 @@ const reset = () => {
 
 <template>
   <form class="text-white w-full">
-    <button
-      type="button"
-      @click="reset"
-    >
-      リセット
-    </button>
-
     <FormElementsCheckBox
       :props="formConfig[0]"
     />
@@ -64,4 +59,14 @@ const reset = () => {
       />
     </div>
   </form>
+
+  <button
+    class="absolute -bottom-20 right-0 w-[70px] h-[40px] bg-white text-white rounded-none"
+    type="button"
+    @click="reset"
+  >
+    <span class="font-black text-primary">
+      リセット
+    </span>
+  </button>
 </template>
