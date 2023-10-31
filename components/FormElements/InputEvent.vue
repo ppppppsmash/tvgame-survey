@@ -1,4 +1,6 @@
 <script setup>
+import { useFormStore } from '~/stores/form'
+
 defineProps({
   props: {
     type: Object,
@@ -6,20 +8,24 @@ defineProps({
   }
 })
 
-const feedback = ref('')
+const formStore = useFormStore()
 
 const isShow = ref(false)
 watchEffect(() => {
-  isShow.value = feedback.value ? true : false
+  isShow.value = formStore.event ? true : false
 })
 
+const handleNext = () => {
+  formStore.eventCheck = true
+  formStore.feedbackCheck = false
+}
 </script>
 
 <template>
   <div class="w-full my-6">
     <div>
       <label>
-        <h5 class="text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
+        <h5 class="font-rampart text-2xl font-extrabold leading-[2.5rem]">{{props.label }}</h5>
       </label>
 
       <input
@@ -28,13 +34,14 @@ watchEffect(() => {
         :type="props.type"
         :name="props.name"
         :placehold="props.options.attrs.placeholder"
-        v-model="feedback"
+        v-model="formStore.event"
       />
     </div>
 
     <NextButton
       :class="[isShow ? 'block' : 'hidden']"
       @click="handleNext"
+      :name="props.buttonText"
     />
   </div>
 </template>

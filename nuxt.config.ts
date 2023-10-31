@@ -35,7 +35,8 @@ export default defineNuxtConfig({
       'Zen Maru Gothic': true,
       'Mochiy Pop One': true,
       'Murecho': true,
-      'Noto Sans JP': true
+      'Noto Sans JP': true,
+      'Rampart One': true,
     }
   },
   experimental: {

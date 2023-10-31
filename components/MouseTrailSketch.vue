@@ -5,7 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, reactive, watch, Ref } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
 import type { IOriginalPointData } from 'laser-pen'
 import {

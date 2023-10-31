@@ -15,12 +15,17 @@ watchEffect(() => {
   isShow.value = formStore.satisfaction ? true : false
 })
 
+const handleNext = () => {
+  formStore.satisfactionCheck = true
+  formStore.roomsCheck = false
+}
+
 </script>
 
 <template>
   <div>
     <label>
-      <h5 class="text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
+      <h5 class="font-rampart text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
     </label>
 
     <div class="my-8">
@@ -32,7 +37,7 @@ watchEffect(() => {
         <input
           :type="props.type"
           :value="choice"
-          v-model="satisfaction"
+          v-model="formStore.satisfaction"
         />
         <span class="text-xl">{{ choice }}</span>
       </div>
@@ -41,6 +46,7 @@ watchEffect(() => {
     <NextButton
       :class="[isShow ? 'block' : 'hidden']"
       @click="handleNext"
+      :name="props.buttonText"
     />
   </div>
 </template>

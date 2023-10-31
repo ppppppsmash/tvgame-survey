@@ -28,13 +28,13 @@ const reset = () => {
   router.push({ path: '/survey' })
 }
 
-const formValue = ref({
-  rooms: [],
-  satisfaction: '',
-  feedback: '',
-  event: '',
-  name: ''
-})
+const handleNext = (prevCheck, nextCheck) => {
+  prevCheck = true
+  nextCheck = false
+  // console.log(prevCheck, nextCheck)
+  // formStore.feedbackCheck = true
+  // formStore.satisfactionCheck = false
+}
 
 const formFields = props.formConfig.map((field) => {
   let component = getComponent(field.type)
@@ -54,8 +54,7 @@ const isShow = ref(false)
 </script>
 
 <template>
-  <form class="text-white">
-
+  <form class="text-white w-full">
     <button
       type="button"
       @click="reset"
@@ -74,19 +73,19 @@ const isShow = ref(false)
     </div>
 
     <div v-if="formStore.satisfactionCheck">
-      <FormElementsInput
+      <FormElementsInputFeedback
         :props="formConfig[2]"
       />
     </div>
 
     <div v-if="formStore.feedbackCheck">
-      <FormElementsInput
+      <FormElementsInputEvent
         :props="formConfig[3]"
       />
     </div>
 
     <div v-if="formStore.eventCheck">
-      <FormElementsInput
+      <FormElementsInputName
         :props="formConfig[4]"
       />
     </div>
