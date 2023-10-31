@@ -46,6 +46,7 @@ const handleNext = () => {
     <NextButton
       :class="[isShow ? 'block' : 'hidden']"
       @click="handleNext"
+      :name="props.buttonText"
     />
   </div>
 </template>

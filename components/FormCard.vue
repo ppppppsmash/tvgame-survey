@@ -31,6 +31,7 @@ const reset = () => {
 const handleNext = (prevCheck, nextCheck) => {
   prevCheck = true
   nextCheck = false
+  // console.log(prevCheck, nextCheck)
   // formStore.feedbackCheck = true
   // formStore.satisfactionCheck = false
 }
@@ -72,21 +73,19 @@ const isShow = ref(false)
     </div>
 
     <div v-if="formStore.satisfactionCheck">
-      <FormElementsInput
+      <FormElementsInputFeedback
         :props="formConfig[2]"
-        :click="() => handleNext(formStore.feedbackCheck, formStore.satisfactionCheck)"
       />
     </div>
 
     <div v-if="formStore.feedbackCheck">
-      <FormElementsInput
+      <FormElementsInputEvent
         :props="formConfig[3]"
-        :click="() => handleNext(formStore.eventCheck, formStore.feedbackCheck)"
       />
     </div>
 
     <div v-if="formStore.eventCheck">
-      <FormElementsInput
+      <FormElementsInputName
         :props="formConfig[4]"
       />
     </div>

@@ -1,4 +1,4 @@
-import Input from './Input.vue'
+import Input from './InputFeedback.vue'
 import CheckBox from './CheckBox.vue'
 import Radio from './Radio.vue'
 import { ComponentOptionsMixin, DefineComponent } from 'vue'

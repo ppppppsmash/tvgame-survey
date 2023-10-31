@@ -5,25 +5,19 @@ defineProps({
   props: {
     type: Object,
     default: null
-  },
-  click: {
-    type: Function
   }
 })
-//defineProps(['props', 'click'])
 
 const formStore = useFormStore()
 
-//const feedback = ref('')
-
 const isShow = ref(false)
 watchEffect(() => {
-  isShow.value = formStore.feedback ? true : false
+  isShow.value = formStore.event ? true : false
 })
 
 const handleNext = () => {
-  formStore.feedbackCheck = true
-  formStore.satisfactionCheck = false
+  formStore.eventCheck = true
+  formStore.feedbackCheck = false
 }
 </script>
 
@@ -31,7 +25,7 @@ const handleNext = () => {
   <div class="w-full my-6">
     <div>
       <label>
-        <h5 class="font-rampart text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
+        <h5 class="font-rampart text-2xl font-extrabold leading-[2.5rem]">{{props.label }}</h5>
       </label>
 
       <input
@@ -40,13 +34,14 @@ const handleNext = () => {
         :type="props.type"
         :name="props.name"
         :placehold="props.options.attrs.placeholder"
-        v-model="formStore.feedback"
+        v-model="formStore.event"
       />
     </div>
 
     <NextButton
       :class="[isShow ? 'block' : 'hidden']"
-      @click="click"
+      @click="handleNext"
+      :name="props.buttonText"
     />
   </div>
 </template>

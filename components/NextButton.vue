@@ -1,12 +1,10 @@
 <script setup>
 defineProps({
-  props: {
+  name: {
     type: Object,
     default: null
   }
 })
-
-//const emit = defineEmits(['click'])
 
 </script>
 
@@ -16,7 +14,7 @@ defineProps({
     type="button"
   >
     <span class="font-black text-primary">
-      NEXT
+      {{ name }}
     </span>
   </button>
 </template>
