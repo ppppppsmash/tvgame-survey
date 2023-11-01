@@ -26,6 +26,7 @@ export default {
         default: ['Noto Sans JP'],
         rampart: ['Rampart One'],
         young: ['Young Serif'],
+        symbol: ['ITC Benguiat W01'],
       },
       skew: {
         '30': '30deg'

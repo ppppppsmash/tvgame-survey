@@ -26,7 +26,8 @@ const { addClass } = toRefs(props)
 <style>
 .st {
   width: 625px;
-  margin: 1rem auto 2rem 1rem;
+  height: 190px;
+  margin: 1rem auto auto 1rem;
   text-align: center;
   text-transform: uppercase;
   font-size: 6.5rem;
@@ -62,6 +63,7 @@ const { addClass } = toRefs(props)
   margin-bottom: -1.2rem;
   max-width: 612px;
   margin-left: 5px;
+  background-color: #1c0502;
 }
 
 .st-bound-mini {

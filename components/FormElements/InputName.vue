@@ -25,7 +25,7 @@ const handleNext = () => {
   <div class="w-full my-6">
     <div>
       <label>
-        <h5 class="font-young text-symbol text-2xl font-extrabold leading-[2.5rem]">{{props.label }}</h5>
+        <h5 class="font-serif text-symbol text-2xl font-extrabold leading-[2.5rem]">{{props.label }}</h5>
       </label>
 
       <input

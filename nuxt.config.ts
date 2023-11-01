@@ -38,6 +38,7 @@ export default defineNuxtConfig({
       'Noto Sans JP': true,
       'Rampart One': true,
       'Young Serif': true,
+      'ITC Benguiat W01': true,
     }
   },
   experimental: {

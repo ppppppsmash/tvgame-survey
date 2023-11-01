@@ -10,10 +10,10 @@ defineProps({
 
 <template>
   <button
-    class="w-[70px] h-[40px] bg-white text-white rounded-none"
+    class="w-[70px] h-[40px] bg-symbol text-white rounded-sm"
     type="button"
   >
-    <span class="font-black text-primary">
+    <span class="font-black text-black">
       {{ name }}
     </span>
   </button>
