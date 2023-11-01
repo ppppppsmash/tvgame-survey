@@ -13,9 +13,10 @@ const animationHandler = () => {
   >
     <ThreeModelScene />
 
-    <Header
+    <!-- <Header
       addClass="absolute right-8 bottom-8 text-primary"
-    />
+    /> -->
+    <HeroTitle addClass="absolute right-8 bottom-16 h-[180px]" />
 
     <ScrollButton />
   </div>

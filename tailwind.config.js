@@ -14,6 +14,7 @@ export default {
       secondary: '#FFFFFF',
       tertiary: '#313640',
       brand: '#E5E5E5',
+      symbol: '#ED2B12',
       required: '#DC2626',
     },
     extend: {
@@ -24,6 +25,8 @@ export default {
         murecho: ['Murecho'],
         default: ['Noto Sans JP'],
         rampart: ['Rampart One'],
+        young: ['Young Serif'],
+        symbol: ['ITC Benguiat W01'],
       },
       skew: {
         '30': '30deg'

@@ -79,7 +79,7 @@ onMounted(async () => {
   const scene = new THREE.Scene()
   const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 200)
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-  renderer.setClearColor(new THREE.Color(0xE5E5E5))
+  renderer.setClearColor(new THREE.Color(0x000000))
   renderer.setSize(window.innerWidth, window.innerHeight)
   threeSceneRef.value.appendChild(renderer.domElement)
   const imgPathList = [

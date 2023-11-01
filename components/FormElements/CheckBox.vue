@@ -26,7 +26,7 @@ const handleNext = () => {
     v-if="formStore.roomsShow"
   >
     <label>
-      <h5 class="font-rampart text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
+      <h5 class="font-serif text-symbol text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
     </label>
 
     <div class="my-8">
@@ -40,7 +40,7 @@ const handleNext = () => {
           :value="choice"
           v-model="formStore.rooms"
         />
-        <span class="text-xl">{{ choice }}</span>
+        <span class="text-xl text-symbol font-serif">{{ choice }}</span>
       </div>
     </div>
 
