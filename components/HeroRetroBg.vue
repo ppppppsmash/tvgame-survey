@@ -159,7 +159,8 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
-    color: #a3c;
+    /* color: #a3c; */
+    color: #ed2b12;
     background-color: #000;
     z-index: -1;
   }

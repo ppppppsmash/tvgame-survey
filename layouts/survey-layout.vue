@@ -7,9 +7,10 @@
     <HeroRetroBg />
     <!-- <HeroBg /> -->
 
-    <Header
+    <!-- <Header
       addClass="absolute top-0 left-0 z-50 text-primary"
-    />
+    /> -->
+    <HeroTitle addClass="absolute top-0 left-0 z-50" />
 
     <main class="relative z-50 w-1/2">
       <slot />
