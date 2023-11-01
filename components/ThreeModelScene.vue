@@ -54,7 +54,8 @@ const loadImage = async (imgPath: string, scene: THREE.Scene, delta = 0) => {
   const scale = 2.7
   const planeGeometry = createRoundedRectangleWithThickness(scale, height / width * scale, 0.2)
   const planeMaterial = new THREE.MeshBasicMaterial({ map: texture })
-  const plane = new THREE.Mesh(planeGeometry, [planeMaterial, new THREE.MeshBasicMaterial({ color: 0xFFFFFF })])
+  //const plane = new THREE.Mesh(planeGeometry, [planeMaterial, new THREE.MeshBasicMaterial({ color: 0xED2B12 })])
+  const plane = new THREE.Mesh(planeGeometry, [planeMaterial, new THREE.MeshBasicMaterial({ color: 0x000000 })])
   const angleInRadians = THREE.MathUtils.degToRad(5)
   
   plane.rotation.x = -angleInRadians

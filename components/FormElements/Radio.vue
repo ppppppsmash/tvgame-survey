@@ -10,25 +10,34 @@ defineProps({
 
 const formStore = useFormStore()
 
+const isClick = ref(false)
+
 const isShow = ref(false)
 watchEffect(() => {
   isShow.value = formStore.satisfaction ? true : false
 })
 
 const handleNext = () => {
-  formStore.satisfactionCheck = true
-  formStore.roomsCheck = false
+  setTimeout(() => {
+    formStore.satisfactionCheck = true
+    formStore.roomsCheck = false
+  }, 1000)
+
+  isClick.value = true
 }
 
 </script>
 
 <template>
-  <div>
+  <div
+    :class="isClick ? 'animate-slide-out-top' : ''"
+    class="animate-slide-in-bottom"
+  >
     <label>
-      <h5 class="font-young text-symbol text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
+      <h5 class="font-serif text-symbol text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
     </label>
 
-    <div class="my-8">
+    <div class="my-8 flex items-center gap-x-16">
       <div
         v-for="(choice, index) in props.options.choices"
         :key="index"
@@ -39,7 +48,7 @@ const handleNext = () => {
           :value="choice"
           v-model="formStore.satisfaction"
         />
-        <span class="text-xl text-symbol font-young">{{ choice }}</span>
+        <span class="text-xl text-symbol font-serif">{{ choice }}</span>
       </div>
     </div>
 

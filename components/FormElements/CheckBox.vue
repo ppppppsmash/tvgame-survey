@@ -10,20 +10,28 @@ defineProps({
 
 const formStore = useFormStore()
 
+const isClick = ref(false)
+
 const isShow = ref(false)
 watchEffect(() => {
   isShow.value = formStore.rooms.length ? true : false
 })
 
 const handleNext = () => {
-  formStore.roomsCheck = true
-  formStore.roomsShow = false
+  setTimeout(() => {
+    formStore.roomsCheck = true
+    formStore.roomsShow = false
+  }, 1000)
+
+  isClick.value = true
 }
 </script>
 
 <template>
   <div
     v-if="formStore.roomsShow"
+    :class="isClick ? 'animate-slide-out-top' : ''"
+    class="animate-slide-in-bottom"
   >
     <label>
       <h5 class="font-serif text-symbol text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
