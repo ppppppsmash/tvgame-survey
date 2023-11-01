@@ -25,6 +25,14 @@ const handleNext = () => {
 
   isClick.value = true
 }
+
+const checkHandler = (choice) => {
+  if (formStore.rooms.includes(choice)) {
+    return 'text-black font-black bg-symbol'
+  } else {
+    return ''
+  }
+}
 </script>
 
 <template>
@@ -41,14 +49,24 @@ const handleNext = () => {
       <div
         v-for="(choice, index) in props.options.choices"
         :key="index"
-        class="my-2"
+        class="my-2 border border-symbol px-4 py-2"
+        :class="checkHandler(choice)"
       >
-        <input
-          :type="props.type"
-          :value="choice"
-          v-model="formStore.rooms"
-        />
-        <span class="text-xl text-symbol font-serif">{{ choice }}</span>
+        <label
+          class="block relative cursor-pointer"
+          @click="checkHandler(choice)"
+        >
+          <input
+            :type="props.type"
+            :value="choice"
+            v-model="formStore.rooms"
+            class="hidden"
+          >
+          <span
+            class="text-xl text-symbol font-serif"
+            :class="checkHandler(choice)"
+          >{{ choice }}</span>
+        </label>
       </div>
     </div>
 

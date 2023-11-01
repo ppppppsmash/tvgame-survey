@@ -22,19 +22,19 @@ onMounted(() => {
 })
 
 watchEffect(() => {
-    if (formStore.roomsCheck) {
-      formStore.incrementProgress()
-    } else if (formStore.satisfactionCheck) {
-      formStore.incrementProgress()
-    } else if (formStore.feedbackCheck) {
-      formStore.incrementProgress()
-    } else if (formStore.eventCheck) {
-      formStore.incrementProgress()
-    } else if (formStore.nameCheck) {
-      formStore.incrementProgress()
-    } else {
-        console.log(`まだいけます！`)
-    }
+  if (formStore.roomsCheck) {
+    formStore.incrementProgress()
+  } else if (formStore.satisfactionCheck) {
+    formStore.incrementProgress()
+  } else if (formStore.feedbackCheck) {
+    formStore.incrementProgress()
+  } else if (formStore.eventCheck) {
+    formStore.incrementProgress()
+  } else if (formStore.nameCheck) {
+    formStore.incrementProgress()
+  } else {
+    console.log(`まだいけます！`)
+  }
 })
 
 </script>

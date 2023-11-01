@@ -24,3 +24,8 @@ export const useFormStore = defineStore('form', {
     }
   }
 })
+
+export const useProgress = defineStore('progress', {
+  state: () => ({
+  })
+})
