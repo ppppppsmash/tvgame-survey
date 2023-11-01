@@ -25,6 +25,7 @@ const reset = () => {
   formStore.eventCheck = false
   formStore.name = ''
   formStore.nameCheck = false
+  formStore.progress = 0
   router.push({ path: '/survey' })
 }
 </script>
@@ -58,10 +59,14 @@ const reset = () => {
         :props="formConfig[4]"
       />
     </div>
+
+    <FormElementsProgress
+      :props="formConfig"
+    />
   </form>
 
   <button
-    class="absolute -bottom-20 right-0 w-[70px] h-[40px] bg-symbol text-white rounded-sm"
+    class="absolute right-0 w-[70px] h-[40px] bg-symbol text-white rounded-sm"
     type="button"
     @click="reset"
   >
