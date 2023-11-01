@@ -14,12 +14,12 @@ const handleNext = () => {
   <div v-if="formStore.messageCheck">
     <div class="sm:py-6 mt-6 mb-10">
       <div class="">
-        <p class="font-rampart font-black mb-6 text-h6 text-white shadow-text">
+        <p class="font-young font-black mb-6 text-h6 text-symbol">
           この度はゲーム会にご参加いただきありがとうございました！<br>
           楽しんでいただけましたでしょうか。
         </p>
 
-        <p class="font-rampart text-h6 text-white font-black shadow-text">
+        <p class="font-young text-h6 text-symbol font-black">
           皆さんからのフィードバックをもとに、今後のイベント開催の参考にさせていただきたいと思っております。<br>
           ご意見・ご感想をお聞かせくださいますようお願いします。
         </p>

@@ -14,6 +14,7 @@ export default {
       secondary: '#FFFFFF',
       tertiary: '#313640',
       brand: '#E5E5E5',
+      symbol: '#ED2B12',
       required: '#DC2626',
     },
     extend: {
