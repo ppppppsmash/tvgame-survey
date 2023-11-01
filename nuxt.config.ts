@@ -37,6 +37,7 @@ export default defineNuxtConfig({
       'Murecho': true,
       'Noto Sans JP': true,
       'Rampart One': true,
+      'Young Serif': true,
     }
   },
   experimental: {

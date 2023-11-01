@@ -24,6 +24,7 @@ export default {
         murecho: ['Murecho'],
         default: ['Noto Sans JP'],
         rampart: ['Rampart One'],
+        young: ['Young Serif'],
       },
       skew: {
         '30': '30deg'

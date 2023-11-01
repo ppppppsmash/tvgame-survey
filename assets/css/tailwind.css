@@ -1,3 +1,10 @@
+@import "ress";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'ITC Benguiat W01';
+  src: url('../../public/font/itc-benguiat-bold.otf') format("opentype");
+}
