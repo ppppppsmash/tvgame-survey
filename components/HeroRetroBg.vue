@@ -4,6 +4,7 @@
 <template>
   <div class="absolute bottom-0 z-50 w-full h-full">
     <div id="retrobg">
+      <!-- <div id="retro-game"></div> -->
     <!-- <div id="retrobg-sky">
       <div id="retrobg-stars">
         <div class="retrobg-star" style="left:  5%; top: 55%; transform: scale( 2 );"></div>
@@ -175,6 +176,12 @@
     width: 100%;
     height: 55%;
     background: linear-gradient( #214 75%, #249 );
+  }
+
+  #retro-game {
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/gameboy.svg');
   }
 
   /* ............................................................... */

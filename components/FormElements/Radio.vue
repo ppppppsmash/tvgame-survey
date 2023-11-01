@@ -26,6 +26,13 @@ const handleNext = () => {
   isClick.value = true
 }
 
+const radioHandler = (element) => {
+  if (formStore.satisfaction === element) {
+    return 'text-black bg-symbol';
+  } else {
+    return '';
+  }
+}
 </script>
 
 <template>
@@ -34,21 +41,35 @@ const handleNext = () => {
     class="animate-slide-in-bottom"
   >
     <label>
-      <h5 class="font-serif text-symbol text-2xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
+      <h5 class="font-serif text-symbol text-2xl font-extrabold leading-[2.5rem]">
+        {{ props.label }}
+      </h5>
     </label>
 
-    <div class="my-8 flex items-center gap-x-16">
+    <div class="my-8 flex items-center gap-x-4 w-full">
       <div
         v-for="(choice, index) in props.options.choices"
         :key="index"
         class="my-2"
       >
-        <input
-          :type="props.type"
-          :value="choice"
-          v-model="formStore.satisfaction"
-        />
-        <span class="text-xl text-symbol font-serif">{{ choice }}</span>
+        <label
+          class="block relative border-2 border-symbol border-solid px-8 py-6 cursor-pointer"
+          :class="radioHandler(choice)"
+          @click="formStore.satisfaction = choice"
+        >
+          <input
+            :type="props.type"
+            :value="choice"
+            v-model="formStore.satisfaction"
+            class="hidden"
+          />
+          <span
+            class="text-xl text-symbol font-serif"
+            :class="radioHandler(choice)"
+          >
+            {{ choice }}
+          </span>
+        </label>
       </div>
     </div>
 
