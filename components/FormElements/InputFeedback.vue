@@ -10,19 +10,28 @@ defineProps({
 
 const formStore = useFormStore()
 
+const isClick = ref(false)
+
 const isShow = ref(false)
 watchEffect(() => {
   isShow.value = formStore.feedback ? true : false
 })
 
 const handleNext = () => {
+  setTimeout(() => {
   formStore.feedbackCheck = true
   formStore.satisfactionCheck = false
+  }, 1000)
+
+  isClick.value = true
 }
 </script>
 
 <template>
-  <div class="w-full my-6">
+  <div
+    class="w-full my-6 animate-slide-in-bottom"
+    :class="isClick ? 'animate-slide-out-top' : ''"
+  >
     <div>
       <label>
         <h5 class="font-serif text-symbol text-2xl font-extrabold leading-[2.5rem]">{{props.label }}</h5>

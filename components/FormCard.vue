@@ -61,12 +61,12 @@ const reset = () => {
   </form>
 
   <button
-    class="absolute -bottom-20 right-0 w-[70px] h-[40px] bg-white text-white rounded-none"
+    class="absolute -bottom-20 right-0 w-[70px] h-[40px] bg-symbol text-white rounded-sm"
     type="button"
     @click="reset"
   >
-    <span class="font-black text-primary">
-      リセット
+    <span class="font-black text-black">
+      RESET
     </span>
   </button>
 </template>
