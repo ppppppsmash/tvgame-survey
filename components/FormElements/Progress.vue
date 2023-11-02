@@ -1,6 +1,7 @@
 <script setup>
-import { useFormStore } from '~/stores/form'
+import { useFormStore, useFormProgressStore } from '~/stores/form'
 const formStore = useFormStore()
+const formProgressStore = useFormProgressStore()
 const router = useRouter()
 
 const propsValue = defineProps({
@@ -17,21 +18,22 @@ const progressStatus = computed(() => {
   return formStore.progress / props.value.length * 100
 })
 
-onMounted(() => {
-  console.log(formStore.rooms)
-})
-
 watchEffect(() => {
-  if (formStore.roomsCheck) {
+  if (formStore.roomsCheck && !formProgressStore.checkboxProgress ) {
     formStore.incrementProgress()
-  } else if (formStore.satisfactionCheck) {
+    formProgressStore.checkboxProgress = true
+  } else if (formStore.satisfactionCheck && !formProgressStore.satisfactionProgress) {
     formStore.incrementProgress()
-  } else if (formStore.feedbackCheck) {
+    formProgressStore.satisfactionProgress = true
+  } else if (formStore.feedbackCheck && !formProgressStore.feedbackProgress) {
     formStore.incrementProgress()
-  } else if (formStore.eventCheck) {
+    formProgressStore.feedbackProgress = true
+  } else if (formStore.eventCheck && !formProgressStore.eventProgress) {
     formStore.incrementProgress()
-  } else if (formStore.nameCheck) {
+    formProgressStore.eventProgress = true
+  } else if (formStore.nameCheck && !formProgressStore.nameProgress) {
     formStore.incrementProgress()
+    formProgressStore.nameProgress = true
   } else {
     console.log(`まだいけます！`)
   }

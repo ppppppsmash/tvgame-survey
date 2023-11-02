@@ -15,7 +15,8 @@ export const useFormStore = defineStore('form', {
     eventCheck: false,
     name: '',
     nameCheck: false,
-    progress: 0
+    progress: 1,
+    hasIncremented: false
   }),
   persist: true,
   actions: {
@@ -23,6 +24,16 @@ export const useFormStore = defineStore('form', {
       this.progress ++
     }
   }
+})
+
+export const useFormProgressStore = defineStore('progress', {
+  state: () => ({
+    checkboxProgress: false,
+    satisfactionProgress: false,
+    feedbackProgress: false,
+    eventProgress: false,
+    nameProgress: false
+  })
 })
 
 export const useProgress = defineStore('progress', {
