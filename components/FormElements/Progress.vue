@@ -41,10 +41,27 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="absolute -right-20 -bottom-[160px]">
-    <div class="flex items-center gap-x-4">
-      <p class="font-symbol text-symbol text-xl">{{ progressStatus }}%</p>
+  <div class="fixed right-[15%] bottom-[30.5%]">
+    <div class="flex items-center gap-x-4 w-[280px]">
+      <div class="progress-bar w-8/12 h-3 relative bg-black border-symbol border-2 border-solid">
+        <div
+          class="progress-bar-inner absolute h-full bg-symbol"
+          :style="'width:'+ progressStatus + '%'"
+        />
+      </div>
+      <p class="w-2/12 font-symbol text-symbol text-xl">{{formStore.progress + 1}} / {{ props.length }}</p>
     </div>
     
   </div>
 </template>
+
+<style>
+  @keyframes loading {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+</style>
