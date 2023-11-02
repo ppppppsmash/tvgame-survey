@@ -22,6 +22,9 @@ export const useFormStore = defineStore('form', {
   actions: {
     incrementProgress() {
       this.progress ++
+    },
+    decrementProgress() {
+      this.progress --
     }
   }
 })
