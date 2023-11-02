@@ -1,6 +1,7 @@
 <script setup>
-import { useFormStore } from '~/stores/form'
+import { useFormStore, useFormProgressStore } from '~/stores/form'
 const formStore = useFormStore()
+const formProgressStore = useFormProgressStore()
 const router = useRouter()
 
 const propsValue = defineProps({
@@ -14,35 +15,35 @@ const { props } = toRefs(propsValue)
 
 const progressStatus = computed(() => {
   console.log(formStore.progress, props.value.length)
-  return formStore.progress / props.value.length * 100
-})
-
-onMounted(() => {
-  console.log(formStore.rooms)
+  return (formStore.progress + 1) / props.value.length * 100
 })
 
 watchEffect(() => {
-  if (formStore.roomsCheck) {
+  if (formStore.roomsCheck && !formProgressStore.checkboxProgress ) {
     formStore.incrementProgress()
-  } else if (formStore.satisfactionCheck) {
+    formProgressStore.checkboxProgress = true
+  } else if (formStore.satisfactionCheck && !formProgressStore.satisfactionProgress) {
     formStore.incrementProgress()
-  } else if (formStore.feedbackCheck) {
+    formProgressStore.satisfactionProgress = true
+  } else if (formStore.feedbackCheck && !formProgressStore.feedbackProgress) {
     formStore.incrementProgress()
-  } else if (formStore.eventCheck) {
+    formProgressStore.feedbackProgress = true
+  } else if (formStore.eventCheck && !formProgressStore.eventProgress) {
     formStore.incrementProgress()
-  } else if (formStore.nameCheck) {
+    formProgressStore.eventProgress = true
+  } else if (formStore.nameCheck && !formProgressStore.nameProgress) {
     formStore.incrementProgress()
+    formProgressStore.nameProgress = true
   } else {
     console.log(`まだいけます！`)
   }
 })
-
 </script>
 
 <template>
   <div class="absolute -right-20 -bottom-[160px]">
     <div class="flex items-center gap-x-4">
-      <p v-if="formStore.progress" class="font-symbol text-symbol text-xl">{{ progressStatus }}%</p>
+      <p class="font-symbol text-symbol text-xl">{{ progressStatus }}%</p>
     </div>
     
   </div>
