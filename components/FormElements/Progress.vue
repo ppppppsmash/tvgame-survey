@@ -15,7 +15,7 @@ const { props } = toRefs(propsValue)
 
 const progressStatus = computed(() => {
   console.log(formStore.progress, props.value.length)
-  return formStore.progress / props.value.length * 100
+  return (formStore.progress + 1) / props.value.length * 100
 })
 
 watchEffect(() => {
@@ -38,13 +38,12 @@ watchEffect(() => {
     console.log(`まだいけます！`)
   }
 })
-
 </script>
 
 <template>
   <div class="absolute -right-20 -bottom-[160px]">
     <div class="flex items-center gap-x-4">
-      <p v-if="formStore.progress" class="font-symbol text-symbol text-xl">{{ progressStatus }}%</p>
+      <p class="font-symbol text-symbol text-xl">{{ progressStatus }}%</p>
     </div>
     
   </div>
