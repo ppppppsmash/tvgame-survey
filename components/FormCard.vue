@@ -60,6 +60,10 @@ const reset = () => {
       />
     </div>
 
+    <div v-if="formStore.nameCheck">
+      <FormElementsThanks />
+    </div>
+
     <FormElementsProgress
       :props="formConfig"
     />

@@ -17,13 +17,32 @@ watchEffect(() => {
   isShow.value = formStore.name ? true : false
 })
 
-const handleNext = () => {
+const handleNext = async () => {
   setTimeout(() => {
-    //formStore.eventCheck = true
+    formStore.nameCheck = true
     formStore.eventCheck = false
   }, 1000)
 
   isClick.value = true
+
+  const formData = new FormData()
+
+  formStore.rooms.forEach((value) => {
+    formData.append('entry.1666306676', value)
+  })
+  formData.append('entry.1747016377', formStore.satisfaction)
+  formData.append('entry.879050699', formStore.feedback)
+  formData.append('entry.284512661', formStore.event)
+  formData.append('entry.1223500353', formStore.name)
+  
+  const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfQMcMsooTvXt7qZWiRPbXxT0BDnpV5rLkfQDBoALUi6wM1Iw/formResponse'
+  const { data, pending, error, refresh } = await useAsyncData(
+    'formData',
+    () => $fetch(GOOGLE_FORM_ACTION, {
+      method: 'POST',
+      body: formData
+    })
+  )
 }
 </script>
 
@@ -34,7 +53,7 @@ const handleNext = () => {
   >
     <div>
       <label>
-        <h5 class="font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]">{{props.label }}</h5>
+        <h5 class="font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
       </label>
 
       <input

@@ -41,7 +41,10 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="fixed sm:right-[20%] bottom-[10%] sm:bottom-[10.5%]">
+  <div
+    v-if="!formStore.nameCheck"
+    class="fixed sm:right-[20%] bottom-[10%] sm:bottom-[10.5%]"
+  >
     <div class="flex items-center gap-x-4 w-[260px] sm:w-[280px]">
       <div class="progress-bar w-6/12 h-3 relative bg-black border-symbol border-2 border-solid">
         <div
@@ -51,7 +54,6 @@ watchEffect(() => {
       </div>
       <p class="w-4/12 font-symbol text-symbol text-md sm:text-lg">{{formStore.progress + 1}} / {{ props.length }}</p>
     </div>
-    
   </div>
 </template>
 
