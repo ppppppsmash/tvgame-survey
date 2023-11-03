@@ -65,11 +65,11 @@ const reset = () => {
     />
 
     <button
-      class="fixed bottom-[30%] right-[12%] w-[70px] h-[40px] bg-symbol text-white rounded-sm"
+      class="fixed bottom-[21.5%] sm:bottom-[30%] right-[15%] w-[60px] h-[30px] sm:w-[70px] sm:h-[40px] bg-symbol text-white rounded-sm"
       type="button"
       @click="reset"
     >
-      <span class="font-black text-black">
+      <span class="text-xs sm:text-sm font-black text-black">
         RESET
       </span>
     </button>

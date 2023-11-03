@@ -8,11 +8,11 @@ const { addClass } = toRefs(props)
     <div class="st">
 
       <div class="st-top">
-        <div class="st-bound st-bound-full"></div>
+        <!-- <div class="st-bound st-bound-full"></div> -->
         <p><span class="st-drop st-stranger-s">W</span><span class="st-stranger-t">e</span><span class="st-stranger-r">b</span><span class="st-stranger-a">C</span><span class="st-stranger-n">r</span><span class="st-stranger-g">e</span><span class="st-stranger-e">w</span>
         </p>
-        <div class="st-bound st-bound-mini st-bound-left"></div>
-        <div class="st-bound st-bound-mini st-bound-right"></div>
+        <!-- <div class="st-bound st-bound-mini st-bound-left"></div>
+        <div class="st-bound st-bound-mini st-bound-right"></div> -->
       </div>
 
       <div class="st-bottom">
@@ -25,23 +25,42 @@ const { addClass } = toRefs(props)
 
 <style>
 .st {
-  width: 625px;
-  height: 190px;
-  margin: 1rem auto auto 1rem;
+  width: 200px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 6.5rem;
+  font-size: 3.5rem;
   font-family: 'ITC Benguiat W01';
-  /* font-family: 'Young Serif'; */
   font-weight: 800;
   color: #1c0502;
   text-shadow: -0.05rem -0.05rem 1px #ed2b12,
-    0.05rem -0.05rem 1px #ed2b12,
-    -0.05rem 0.05rem 1px #ed2b12,
-    0.05rem 0.05rem 1px #ed2b12,
-    0 0 15px #630100,
-    0 0 20px #450100;
-  letter-spacing: -2px;
+      0.05rem -0.05rem 1px #ed2b12,
+      -0.05rem 0.05rem 1px #ed2b12,
+      0.05rem 0.05rem 1px #ed2b12,
+      0 0 15px #630100,
+      0 0 20px #450100;
+    letter-spacing: -2px;
+}
+
+@media screen and (min-width: 450px) {
+  .st {
+    width: 512px;
+    height: 190px;
+    margin: 1rem auto auto 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 6.5rem;
+    font-family: 'ITC Benguiat W01';
+    /* font-family: 'Young Serif'; */
+    font-weight: 800;
+    color: #1c0502;
+    text-shadow: -0.05rem -0.05rem 1px #ed2b12,
+      0.05rem -0.05rem 1px #ed2b12,
+      -0.05rem 0.05rem 1px #ed2b12,
+      0.05rem 0.05rem 1px #ed2b12,
+      0 0 15px #630100,
+      0 0 20px #450100;
+    letter-spacing: -2px;
+  }
 }
 
 .st p {
@@ -61,13 +80,9 @@ const { addClass } = toRefs(props)
   width: 100%;
   margin: auto;
   margin-bottom: -1.2rem;
-  max-width: 612px;
+  max-width: 512px;
   margin-left: 5px;
   background-color: #1c0502;
-}
-
-.st-bound-mini {
-  margin-top: 0.5rem;
 }
 
 .st-bound-left {
@@ -79,58 +94,184 @@ const { addClass } = toRefs(props)
 
 .st-bound-right {
   float: right;
-  width: 103px;
+  width: 102px;
   left: 0.3rem;
   position: relative;
 }
 
 .st-bottom {
   clear: both;
-  top: -5.75rem;
+  top: -2.8rem;
   position: relative;
-  left: .6rem;
+  left: 3rem;
   letter-spacing: 2px;
 }
 
 .st-drop {
   line-height: 0;
   position: relative;
-  top: 1.55rem;
+  top: .5rem;
+}
+
+/* sp */
+.st-top {
+  margin-left: 1rem;
 }
 
 .st-stranger-s {
-  font-size: 10.5rem;
-  letter-spacing: -8px;
-}
+    font-size: 5rem;
+    letter-spacing: -8px;
+  }
 
-.st-stranger-t {
-  letter-spacing: 0;
-}
+  .st-stranger-t {
+    font-size: 3rem;
+    letter-spacing: 0;
+  }
 
-.st-stranger-n {
-  letter-spacing: -5px;
-}
+  .st-stranger-n {
+    font-size: 3rem;
+    letter-spacing: -5px;
+  }
 
-.st-stranger-g {
-  letter-spacing: 0;
-}
+  .st-stranger-g {
+    font-size: 3rem;
+    letter-spacing: 0;
+  }
 
-.st-stranger-r-2 {
-  font-size: 10.5rem;
-  right: 0.2rem;
-}
+  .st-stranger-r {
+    font-size: 3rem;
+    letter-spacing: 0;
+  }
 
-.st-things-t {
-  font-size: 104%;
+  .st-stranger-a {
+    font-size: 3rem;
+    letter-spacing: 0;
+  }
+
+  .st-stranger-e {
+    font-size: 3rem;
+    letter-spacing: 0;
+  }
+
+  .st-stranger-r-2 {
+    font-size: 7.5rem;
+    right: 0.2rem;
+  }
+
+  .st-things-t {
+    font-size: 84%;
+    letter-spacing: 2px;
+  }
+
+  .st-things-h {
+    font-size: 84%;
+    letter-spacing: 2px;
+  }
+
+  .st-things-i {
+    font-size: 84%;
+    letter-spacing: 2px;
+  }
+
+  .st-things-n {
+    font-size: 84%;
+    letter-spacing: -5px;
+  }
+
+  .st-things-g {
+    font-size: 84%;
+    letter-spacing: -3px;
+  }
+
+  .st-things-s {
+    font-size: 84%;
+    letter-spacing: -3px;
+  }
+
+@media screen and (min-width: 450px) {
+.st-bottom {
+  clear: both;
+  top: -5.75rem;
+  position: relative;
+  left: .7rem;
   letter-spacing: 2px;
 }
 
-.st-things-n {
-  letter-spacing: -5px;
+.st-drop {
+  line-height: 0;
+  position: relative;
+  top: 1rem;
 }
 
-.st-things-g {
-  letter-spacing: -3px;
+  .st-stranger-s {
+    font-size: 8.5rem;
+    letter-spacing: -8px;
+  }
+
+  .st-stranger-t {
+    font-size: 5rem;
+    letter-spacing: 0;
+  }
+
+  .st-stranger-n {
+    font-size: 5rem;
+    letter-spacing: -5px;
+  }
+
+  .st-stranger-g {
+    font-size: 5rem;
+    letter-spacing: 0;
+  }
+
+  .st-stranger-r {
+    font-size: 5rem;
+    letter-spacing: 0;
+  }
+
+  .st-stranger-a {
+    font-size: 5rem;
+    letter-spacing: 0;
+  }
+
+  .st-stranger-e {
+    font-size: 5rem;
+    letter-spacing: 0;
+  }
+
+  .st-stranger-r-2 {
+    font-size: 7.5rem;
+    right: 0.2rem;
+  }
+
+  .st-things-t {
+    font-size: 84%;
+    letter-spacing: 2px;
+  }
+
+  .st-things-h {
+    font-size: 84%;
+    letter-spacing: 2px;
+  }
+
+  .st-things-i {
+    font-size: 84%;
+    letter-spacing: 2px;
+  }
+
+  .st-things-n {
+    font-size: 84%;
+    letter-spacing: -5px;
+  }
+
+  .st-things-g {
+    font-size: 84%;
+    letter-spacing: -3px;
+  }
+
+  .st-things-s {
+    font-size: 84%;
+    letter-spacing: -3px;
+  }
 }
 
 </style>

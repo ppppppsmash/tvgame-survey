@@ -1,4 +1,4 @@
-<script setup>
+ <script setup>
 defineProps({
   name: {
     type: Object,
@@ -10,10 +10,10 @@ defineProps({
 
 <template>
   <button
-    class="w-[100px] h-[40px] bg-symbol text-white rounded-sm absolute"
+    class="w-[80px] h-[30px] sm:w-[100px] sm:h-[40px] bg-symbol text-white rounded-sm absolute"
     type="button"
   >
-    <span class="font-black text-black focus:animate-flicker">
+    <span class="text-xs sm:text-sm font-black text-black focus:animate-flicker">
       {{ name }}
     </span>
   </button>

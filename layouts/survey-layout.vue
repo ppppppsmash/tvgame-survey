@@ -12,7 +12,7 @@
     /> -->
     <HeroTitle addClass="absolute top-0 left-0 z-50" />
 
-    <main class="relative z-50 w-1/2">
+    <main class="relative z-50 sm:w-1/2 w-full sm:px-0 px-8">
       <slot />
     </main>
   </div>
