@@ -41,19 +41,19 @@ const radioHandler = (element) => {
     class="animate-slide-in-bottom"
   >
     <label>
-      <h5 class="font-serif text-symbol text-2xl font-extrabold leading-[2.5rem]">
+      <h5 class="font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]">
         {{ props.label }}
       </h5>
     </label>
 
-    <div class="my-8 flex items-center gap-x-4 w-full">
+    <div class="my-4 sm:my-8 flex items-center gap-x-4 w-full">
       <div
         v-for="(choice, index) in props.options.choices"
         :key="index"
         class="my-2"
       >
         <label
-          class="block relative border-2 border-symbol border-solid px-8 py-6 cursor-pointer"
+          class="block relative border-2 border-symbol border-solid px-4 py-2 sm:px-8 sm:py-6 cursor-pointer"
           :class="radioHandler(choice)"
           @click="formStore.satisfaction = choice"
         >
@@ -64,7 +64,7 @@ const radioHandler = (element) => {
             class="hidden"
           />
           <span
-            class="text-xl text-symbol font-serif"
+            class="text-md sm:text-xl text-symbol font-serif"
             :class="radioHandler(choice)"
           >
             {{ choice }}
