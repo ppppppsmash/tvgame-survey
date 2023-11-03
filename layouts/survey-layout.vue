@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="relative bg-transparent overflow-hidden flex items-center justify-center animate-slide-in-bottom h-screen">
+  <div class="relative bg-transparent overflow-hidden flex items-center justify-center animate-slide-in-bottom h-[100dvh]">
 
     <HeroRetroBg />
     <!-- <HeroBg /> -->

@@ -133,7 +133,7 @@ onMounted(async () => {
 <template>
   <div
     ref="threeSceneRef"
-    class="w-[100vw] h-[100vh] absolute transition-all duration-1000"
+    class="w-[100vw] h-[100dvh] absolute transition-all duration-1000"
     :class="{
       'opacity-0': loading,
       'opacity-100': !loading,
