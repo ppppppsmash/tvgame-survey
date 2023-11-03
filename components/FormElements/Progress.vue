@@ -41,15 +41,15 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="fixed right-[20%] sm:right-[20%] bottom-[22%] sm:bottom-[30.5%]">
-    <div class="flex items-center gap-x-4 w-[280px]">
-      <div class="progress-bar w-8/12 h-3 relative bg-black border-symbol border-2 border-solid">
+  <div class="fixed sm:right-[20%] bottom-[10%] sm:bottom-[10.5%]">
+    <div class="flex items-center gap-x-4 w-[260px] sm:w-[280px]">
+      <div class="progress-bar w-6/12 h-3 relative bg-black border-symbol border-2 border-solid">
         <div
           class="progress-bar-inner absolute h-full bg-symbol"
           :style="'width:'+ progressStatus + '%'"
         />
       </div>
-      <p class="w-2/12 font-symbol text-symbol text-md sm:text-lg">{{formStore.progress + 1}} / {{ props.length }}</p>
+      <p class="w-4/12 font-symbol text-symbol text-md sm:text-lg">{{formStore.progress + 1}} / {{ props.length }}</p>
     </div>
     
   </div>
