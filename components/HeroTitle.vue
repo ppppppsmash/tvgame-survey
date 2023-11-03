@@ -25,7 +25,7 @@ const { addClass } = toRefs(props)
 
 <style>
 .st {
-  width: 200px;
+  width: 400px;
   text-align: center;
   text-transform: uppercase;
   font-size: 3.5rem;
@@ -103,7 +103,7 @@ const { addClass } = toRefs(props)
   clear: both;
   top: -2.8rem;
   position: relative;
-  left: 3rem;
+  left: .5rem;
   letter-spacing: 2px;
 }
 
@@ -125,7 +125,7 @@ const { addClass } = toRefs(props)
 
   .st-stranger-t {
     font-size: 3rem;
-    letter-spacing: 0;
+    letter-spacing: -3px;
   }
 
   .st-stranger-n {
@@ -135,22 +135,22 @@ const { addClass } = toRefs(props)
 
   .st-stranger-g {
     font-size: 3rem;
-    letter-spacing: 0;
+    letter-spacing: -3px;
   }
 
   .st-stranger-r {
     font-size: 3rem;
-    letter-spacing: 0;
+    letter-spacing: -3px;
   }
 
   .st-stranger-a {
     font-size: 3rem;
-    letter-spacing: 0;
+    letter-spacing: -3px;
   }
 
   .st-stranger-e {
     font-size: 3rem;
-    letter-spacing: 0;
+    letter-spacing: -3px;
   }
 
   .st-stranger-r-2 {
@@ -160,17 +160,17 @@ const { addClass } = toRefs(props)
 
   .st-things-t {
     font-size: 84%;
-    letter-spacing: 2px;
+    letter-spacing: -3px;
   }
 
   .st-things-h {
     font-size: 84%;
-    letter-spacing: 2px;
+    letter-spacing: -3px;
   }
 
   .st-things-i {
     font-size: 84%;
-    letter-spacing: 2px;
+    letter-spacing: -3px;
   }
 
   .st-things-n {
@@ -235,7 +235,7 @@ const { addClass } = toRefs(props)
 
   .st-stranger-e {
     font-size: 5rem;
-    letter-spacing: 0;
+    letter-spacing: -3px;
   }
 
   .st-stranger-r-2 {
