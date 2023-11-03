@@ -28,7 +28,7 @@ const handleNext = () => {
 
 const radioHandler = (element) => {
   if (formStore.satisfaction === element) {
-    return 'text-black bg-symbol';
+    return 'text-[#000000] bg-symbol';
   } else {
     return '';
   }

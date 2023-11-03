@@ -8,16 +8,6 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
-    [
-      'nuxt-quasar-ui', {
-        config: {
-          brand: {
-            'primary': '#0B2F8F',
-            'secondary': '#D5D5D5',
-          },
-        }
-      }
-    ],
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     'nuxt-icon'

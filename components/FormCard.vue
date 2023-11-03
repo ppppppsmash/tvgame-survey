@@ -73,7 +73,7 @@ const reset = () => {
       type="button"
       @click="reset"
     >
-      <span class="font-neon text-xs sm:text-sm font-black text-black">
+      <span class="font-neon text-xs sm:text-sm font-black text-[#000000]">
         RESET
       </span>
     </button>
