@@ -60,16 +60,20 @@ const reset = () => {
       />
     </div>
 
+    <div v-if="formStore.nameCheck">
+      <FormElementsThanks />
+    </div>
+
     <FormElementsProgress
       :props="formConfig"
     />
 
     <button
-      class="fixed bottom-[21.5%] sm:bottom-[30%] right-[15%] w-[60px] h-[30px] sm:w-[70px] sm:h-[40px] bg-symbol text-white rounded-sm"
+      class="fixed bottom-[9.5%] sm:bottom-[10%] right-[10%] sm:right-[18%] w-[60px] h-[30px] sm:w-[70px] sm:h-[40px] bg-symbol text-white rounded-sm"
       type="button"
       @click="reset"
     >
-      <span class="text-xs sm:text-sm font-black text-black">
+      <span class="font-neon text-xs sm:text-sm font-black text-black">
         RESET
       </span>
     </button>

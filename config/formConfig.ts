@@ -2,7 +2,7 @@ export const formConfig = [
   {
     type: 'checkbox',
     label: 'どの部屋で遊びましたか？',
-    name: '',
+    name: 'entry.1666306676',
     buttonText: 'NEXT',
     options: {
       choices: [
@@ -16,7 +16,7 @@ export const formConfig = [
   {
     type: 'radio',
     label: 'イベントはどのくらい満足しましたか。',
-    name: '',
+    name: 'entry.1747016377',
     buttonText: 'NEXT',
     options: {
       choices: [
@@ -31,7 +31,7 @@ export const formConfig = [
   {
     type: 'text',
     label: 'イベント全体についてのフィードバックがありましたら、記入お願いします。',
-    name: '',
+    name: 'entry.879050699',
     buttonText: 'NEXT',
     options: {
       attrs: {
@@ -42,7 +42,7 @@ export const formConfig = [
   {
     type: 'text',
     label: 'その他開催してほしいイベントはありますでしょうか。',
-    name: '',
+    name: 'entry.284512661',
     buttonText: 'NEXT',
     options: {
       attrs: {
@@ -53,7 +53,7 @@ export const formConfig = [
   {
     type: 'text',
     label: '名前（省略可）',
-    name: '',
+    name: 'entry.1223500353',
     buttonText: 'SEND',
     options: {
       attrs: {

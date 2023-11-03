@@ -26,7 +26,7 @@ const { addClass } = toRefs(props)
 <style>
 .st {
   width: 400px;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
   font-size: 3.5rem;
   font-family: 'ITC Benguiat W01';
@@ -45,12 +45,10 @@ const { addClass } = toRefs(props)
   .st {
     width: 512px;
     height: 190px;
-    margin: 1rem auto auto 1rem;
     text-align: center;
     text-transform: uppercase;
     font-size: 6.5rem;
     font-family: 'ITC Benguiat W01';
-    /* font-family: 'Young Serif'; */
     font-weight: 800;
     color: #1c0502;
     text-shadow: -0.05rem -0.05rem 1px #ed2b12,
@@ -103,14 +101,14 @@ const { addClass } = toRefs(props)
   clear: both;
   top: -2.8rem;
   position: relative;
-  left: .5rem;
+  left: 4rem;
   letter-spacing: 2px;
 }
 
 .st-drop {
   line-height: 0;
   position: relative;
-  top: .5rem;
+  top: .7rem;
 }
 
 /* sp */
@@ -119,7 +117,7 @@ const { addClass } = toRefs(props)
 }
 
 .st-stranger-s {
-    font-size: 5rem;
+    font-size: 5.5rem;
     letter-spacing: -8px;
   }
 

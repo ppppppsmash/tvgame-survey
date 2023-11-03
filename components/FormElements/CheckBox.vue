@@ -42,7 +42,7 @@ const checkHandler = (choice) => {
     class="animate-slide-in-bottom"
   >
     <label>
-      <h5 class="font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
+      <h5 class="font-neon font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
     </label>
 
     <div class="my-8">
@@ -63,7 +63,7 @@ const checkHandler = (choice) => {
             class="hidden"
           >
           <span
-            class="text-md sm:text-xl text-symbol font-serif"
+            class="font-neon text-md sm:text-xl text-symbol font-serif"
             :class="checkHandler(choice)"
           >{{ choice }}</span>
         </label>
