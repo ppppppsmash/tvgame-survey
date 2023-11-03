@@ -23,12 +23,12 @@ const handleNext = () => {
   >
     <div class="sm:py-6 mt-6 mb-10">
       <div class="">
-        <p class="font-serif font-black mb-6 text-md sm:text-xl text-symbol">
+        <p class="font-neon font-black mb-6 text-md sm:text-xl text-symbol">
           この度はゲーム会にご参加いただきありがとうございました！<br>
           楽しんでいただけましたでしょうか。
         </p>
 
-        <p class="font-serif text-md sm:text-xl text-symbol font-black">
+        <p class="font-neon text-md sm:text-xl text-symbol font-black">
           皆さんからのフィードバックをもとに、今後のイベント開催の参考にさせていただきたいと思っております。<br>
           ご意見・ご感想をお聞かせくださいますようお願いします。
         </p>
@@ -42,7 +42,7 @@ const handleNext = () => {
         type="button"
         @click="handleNext"
       >
-        <span class="text-xs sm:text-sm font-black text-black">
+        <span class="font-neon text-xs sm:text-sm font-black text-black">
           NEXT
         </span>
       </button>

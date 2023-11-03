@@ -34,7 +34,7 @@
             after:-skew-y-30
             animate-scroll-move-default"
         />
-        <p class="animate-pulse sm:text-md text-xs font-bold text-symbol font-symbol">
+        <p class="font-neon animate-pulse sm:text-md text-xs font-bold text-symbol font-symbol">
           Click Here
         </p>
       </div>

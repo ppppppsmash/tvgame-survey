@@ -53,11 +53,11 @@ const handleNext = async () => {
   >
     <div>
       <label>
-        <h5 class="font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
+        <h5 class="font-neon font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
       </label>
 
       <input
-        class="w-full leading-8 font-bold border-0 border-b-2 bg-transparent text-md sm:text-xl
+        class="font-neon w-full leading-8 font-bold border-0 border-b-2 bg-transparent text-md sm:text-xl
           outline-none text-symbol placeholder-white my-8 border-symbol border-solid"
         :type="props.type"
         :name="props.name"
