@@ -42,7 +42,7 @@ const handleNext = () => {
         type="button"
         @click="handleNext"
       >
-        <span class="font-neon text-xs sm:text-sm font-black text-black">
+        <span class="font-neon text-xs sm:text-sm font-black text-[#000000]">
           NEXT
         </span>
       </button>

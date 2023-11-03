@@ -43,6 +43,7 @@ export default {
         'slide-out-top': 'slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530)   both',
         'flicker': 'flicker 2s linear infinite',
         'slide-bck-center': 'slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715)   both',
+        'puff-in-center': 'puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715)   both',
       },
       keyframes: {
         'move': {
@@ -136,6 +137,18 @@ export default {
           },
           to: {
             transform: 'translateZ(-400px)'
+          }
+        },
+        'puff-in-center': {
+          '0%': {
+            transform: 'scale(2)',
+            filter: 'blur(2px)',
+            opacity: '0'
+          },
+          to: {
+            transform: 'scale(1)',
+            filter: 'blur(0)',
+            opacity: '1'
           }
         }
       }

@@ -28,7 +28,7 @@ const handleNext = () => {
 
 const checkHandler = (choice) => {
   if (formStore.rooms.includes(choice)) {
-    return 'text-black font-black bg-symbol'
+    return 'text-[#000] font-black bg-symbol'
   } else {
     return ''
   }
