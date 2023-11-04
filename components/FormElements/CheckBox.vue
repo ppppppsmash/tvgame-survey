@@ -42,7 +42,10 @@ const checkHandler = (choice) => {
     class="animate-slide-in-bottom"
   >
     <label>
-      <h5 class="font-neon font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]">{{ props.label }}</h5>
+      <h5
+        class="glitch font-neon font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]"
+        :data-text="props.label"
+      >{{ props.label }}</h5>
     </label>
 
     <div class="my-8">
@@ -63,7 +66,7 @@ const checkHandler = (choice) => {
             class="hidden"
           >
           <span
-            class="neon text-md sm:text-xl font-neon"
+            class="neon text-md sm:text-lg font-neon"
             :class="checkHandler(choice)"
           >{{ choice }}</span>
         </label>
@@ -71,7 +74,7 @@ const checkHandler = (choice) => {
     </div>
 
     <NextButton
-      :class="[isShow ? 'block' : 'hidden']"
+      :class="[isShow ? 'block animate-scale-in-center' : 'hidden animate-scale-out-center']"
       @click="handleNext"
       :name="props.buttonText"
     />

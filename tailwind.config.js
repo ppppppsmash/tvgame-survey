@@ -44,6 +44,8 @@ export default {
         'flicker': 'flicker 2s linear infinite',
         'slide-bck-center': 'slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715)   both',
         'puff-in-center': 'puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715)   both',
+        'scale-in-center': 'scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both',
+        'scale-out-center': 'scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530)   both'
       },
       keyframes: {
         'move': {
@@ -148,6 +150,26 @@ export default {
           to: {
             transform: 'scale(1)',
             filter: 'blur(0)',
+            opacity: '1'
+          }
+        },
+        'scale-in-center': {
+          '0%': {
+            transform: 'scale(0)',
+            opacity: '1'
+          },
+          to: {
+            transform: 'scale(1)',
+            opacity: '1'
+          }
+        },
+        'scale-out-center': {
+          '0%': {
+            transform: 'scale(1)',
+            opacity: '1'
+          },
+          to: {
+            transform: 'scale(0)',
             opacity: '1'
           }
         }

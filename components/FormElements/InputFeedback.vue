@@ -34,11 +34,16 @@ const handleNext = () => {
   >
     <div>
       <label>
-        <h5 class="font-neon font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]">{{props.label }}</h5>
+        <h5
+          class="glitch font-neon font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]"
+          :data-text="props.label"
+        >
+        {{props.label }}
+        </h5>
       </label>
 
       <input
-        class="font-neon w-full leading-8 font-bold border-0 border-b-2 bg-transparent text-md sm:text-xl
+        class="font-neon w-full leading-8 font-bold border-0 border-b-2 bg-transparent text-md sm:text-lg
           outline-none text-symbol placeholder-white my-8 border-symbol border-solid"
         :type="props.type"
         :name="props.name"
@@ -48,7 +53,7 @@ const handleNext = () => {
     </div>
 
     <NextButton
-      :class="[isShow ? 'block' : 'hidden']"
+    :class="[isShow ? 'block animate-scale-in-center' : 'hidden animate-scale-out-center']"
       @click="handleNext"
       :name="props.buttonText"
     />
