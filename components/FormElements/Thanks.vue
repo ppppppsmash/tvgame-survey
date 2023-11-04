@@ -2,22 +2,25 @@
 </script>
 
 <template>
-  <div class="w-full my-6 animate-slide-in-bottom">
+  <div
+    id="thanks"
+    class="w-full my-6 animate-slide-in-bottom"
+  >
     <h5
-      class="titleAction animate-flicker text-symbol text-center font-neon text-whitetext-md sm:text-2xl font-extrabold
+      class="glitch text-symbol text-left sm:text-center font-neon text-white text-md sm:text-2xl font-black
         leading-[2.5rem] mb-8"
+      data-text="ご回答いただきありがとうございました"
     >
       ご回答いただきありがとうございました
     </h5>
-    <!-- <div
-      class="w-full h-[200px] bg-[url('./images/tv.png')] bg-center bg-[length:200px_auto]"
-    ></div> -->
-
-    <div class="tv-zoom-out w-full mx-auto flex justify-center">
+    <div
+      class="tv-zoom-out w-full mx-auto flex justify-center"
+    >
       <img
         src="/images/tv.png"
         width="240"
         class="tv absolute w-1/2"
+        style="animationDelay: 3.4s"
       />
 
       <video
@@ -36,7 +39,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .tv {
   background-image: linear-gradient( #000 0%, transparent );
 }
@@ -72,23 +75,23 @@
 
   from {
     text-shadow: 0 0 10px #fff,
-               0 0 20px  #fff,
-               0 0 30px  #fff,
-               0 0 40px  #ED2B12,
-               0 0 70px  #ED2B12,
-               0 0 80px  #ED2B12,
-               0 0 100px #ED2B12,
-               0 0 150px #ED2B12;
+      0 0 20px  #fff,
+      0 0 30px  #fff,
+      0 0 40px  #ED2B12,
+      0 0 70px  #ED2B12,
+      0 0 80px  #ED2B12,
+      0 0 100px #ED2B12,
+      0 0 150px #ED2B12;
   }
   to {
     text-shadow: 0 0 5px #fff,
-               0 0 10px #fff,
-               0 0 15px #fff,
-               0 0 20px #ED2B12,
-               0 0 35px #ED2B12,
-               0 0 40px #ED2B12,
-               0 0 50px #ED2B12,
-               0 0 75px #ED2B12;
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #ED2B12,
+      0 0 35px #ED2B12,
+      0 0 40px #ED2B12,
+      0 0 50px #ED2B12,
+      0 0 75px #ED2B12;
   }
   }
 
@@ -101,5 +104,80 @@
       opacity: 1;
       transform: none;
     }
+}
+
+.glitch {
+  margin:0 auto;
+}
+@keyframes noise-anim {
+  $steps:20;
+  @for $i from 0 through $steps {
+    #{percentage($i*calc(1/$steps))}{
+      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+    }
+  }
+}
+
+#thanks {
+  @media screen and (min-width:450) {
+    .glitch:after {
+      content: attr(data-text);
+      position: absolute;
+      left: 21%;
+      text-shadow: -1px 0 red;
+      top: 0;
+      color: #ED2B12;
+      background: black;
+      overflow: hidden;
+      clip: rect(0,900px,0,0); 
+      animation: noise-anim 2s infinite linear alternate-reverse;
+    }
+    .glitch:before {
+      content: attr(data-text);
+      position: absolute;
+      left: 21%;
+      text-shadow: 1px 0 blue; 
+      top:0;
+      color: #ED2B12;
+      background: black;
+      overflow: hidden;
+      clip: rect(0,900px,0,0); 
+      animation: noise-anim-2 3s infinite linear alternate-reverse;
+    }
+  }
+}
+
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: #ED2B12;
+  background: black;
+  overflow: hidden;
+  clip: rect(0,900px,0,0); 
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*calc(1/$steps))} {
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue; 
+  top:0;
+  color: #ED2B12;
+  background: black;
+  overflow: hidden;
+  clip: rect(0,900px,0,0); 
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
 </style>

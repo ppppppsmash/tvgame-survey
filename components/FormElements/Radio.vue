@@ -28,9 +28,9 @@ const handleNext = () => {
 
 const radioHandler = (element) => {
   if (formStore.satisfaction === element) {
-    return 'text-[#000000] bg-symbol';
+    return 'font-black bg-symbol'
   } else {
-    return '';
+    return 'text-symbol'
   }
 }
 </script>
@@ -41,7 +41,10 @@ const radioHandler = (element) => {
     class="animate-slide-in-bottom"
   >
     <label>
-      <h5 class="font-neon font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]">
+      <h5
+        class="glitch font-neon font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]"
+        :data-text="props.label"
+      >
         {{ props.label }}
       </h5>
     </label>
@@ -64,7 +67,7 @@ const radioHandler = (element) => {
             class="hidden"
           />
           <span
-            class="font-neon text-md sm:text-xl text-symbol font-serif"
+            class="font-neon text-md sm:text-lg font-serif"
             :class="radioHandler(choice)"
           >
             {{ choice }}
@@ -74,7 +77,7 @@ const radioHandler = (element) => {
     </div>
 
     <NextButton
-      :class="[isShow ? 'block' : 'hidden']"
+    :class="[isShow ? 'block animate-scale-in-center' : 'hidden animate-scale-out-center']"
       @click="handleNext"
       :name="props.buttonText"
     />
