@@ -28,9 +28,9 @@ const handleNext = () => {
 
 const checkHandler = (choice) => {
   if (formStore.rooms.includes(choice)) {
-    return 'text-[#000] font-black bg-symbol'
+    return 'font-black bg-symbol'
   } else {
-    return ''
+    return 'text-symbol'
   }
 }
 </script>
@@ -63,7 +63,7 @@ const checkHandler = (choice) => {
             class="hidden"
           >
           <span
-            class="font-neon text-md sm:text-xl text-symbol font-serif"
+            class="neon text-md sm:text-xl font-neon"
             :class="checkHandler(choice)"
           >{{ choice }}</span>
         </label>

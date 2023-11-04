@@ -28,9 +28,9 @@ const handleNext = () => {
 
 const radioHandler = (element) => {
   if (formStore.satisfaction === element) {
-    return 'text-[#000000] bg-symbol';
+    return 'font-black bg-symbol'
   } else {
-    return '';
+    return 'text-symbol'
   }
 }
 </script>
@@ -64,7 +64,7 @@ const radioHandler = (element) => {
             class="hidden"
           />
           <span
-            class="font-neon text-md sm:text-xl text-symbol font-serif"
+            class="font-neon text-md sm:text-xl font-serif"
             :class="radioHandler(choice)"
           >
             {{ choice }}

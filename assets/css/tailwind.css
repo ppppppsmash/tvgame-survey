@@ -9,11 +9,16 @@
   src: url('../../font/itc-benguiat-bold.otf') format("opentype");
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Train One';
   src: url('../../font/TrainOne-Regular.ttf') format("woff");
+} */
+
+@font-face {
+  font-family: 'Neon';
+  src: url('../../font/neon.otf') format("opentype");
 }
 
 .font-neon {
-  font-family: 'Train One'
+  font-family: 'Neon'
 }

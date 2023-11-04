@@ -23,12 +23,12 @@ const handleNext = () => {
   >
     <div class="sm:py-6 mt-6 mb-10">
       <div class="">
-        <p class="font-neon font-black mb-6 text-md sm:text-xl text-symbol">
+        <p class="font-neon mb-6 text-md sm:text-2xl text-symbol">
           この度はゲーム会にご参加いただきありがとうございました！<br>
           楽しんでいただけましたでしょうか。
         </p>
 
-        <p class="font-neon text-md sm:text-xl text-symbol font-black">
+        <p class="font-neon text-md sm:text-2xl text-symbol">
           皆さんからのフィードバックをもとに、今後のイベント開催の参考にさせていただきたいと思っております。<br>
           ご意見・ご感想をお聞かせくださいますようお願いします。
         </p>

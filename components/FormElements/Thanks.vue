@@ -13,11 +13,14 @@
       class="w-full h-[200px] bg-[url('./images/tv.png')] bg-center bg-[length:200px_auto]"
     ></div> -->
 
-    <div class="tv-zoom-out w-full mx-auto flex justify-center">
+    <div
+      class="tv-zoom-out w-full mx-auto flex justify-center"
+    >
       <img
         src="/images/tv.png"
         width="240"
         class="tv absolute w-1/2"
+        style="animationDelay: 3.4s"
       />
 
       <video
