@@ -7,7 +7,7 @@
     class="w-full my-6 animate-slide-in-bottom"
   >
     <h5
-      class="animate-analog tv-zoom-out text-symbol text-left sm:text-center font-neon text-white text-md sm:text-2xl font-black
+      class="animate-analog tv-zoom-out-text text-symbol text-left sm:text-center font-neon text-white text-md sm:text-2xl font-black
         leading-[2.5rem] mb-8"
       data-text="ご回答いただきありがとうございました"
     >
@@ -48,6 +48,10 @@
 	animation: zoom-out 40s ease-in-out forwards;
 }
 
+.tv-zoom-out-text {
+	animation: zoom-out-text 40s ease-in-out forwards;
+}
+
 .neonText {
   animation: neon1 1.5s ease-in-out infinite alternate;
 }
@@ -60,6 +64,12 @@
 @keyframes zoom-out {
   100% {
     transform: scale(0)
+  } 
+}
+
+@keyframes zoom-out-text {
+  100% {
+    transform: translateY(100px) scale(0)
   } 
 }
 
