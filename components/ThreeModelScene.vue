@@ -51,7 +51,7 @@ const loadImage = async (imgPath: string, scene: THREE.Scene, delta = 0) => {
   const texture = await loadTextureWithPromise(imgPath)
   const width = texture.image.width
   const height = texture.image.height
-  const scale = 2.7
+  const scale = 2.2
   const planeGeometry = createRoundedRectangleWithThickness(scale, height / width * scale, 0.2)
   const planeMaterial = new THREE.MeshBasicMaterial({ map: texture })
   //const plane = new THREE.Mesh(planeGeometry, [planeMaterial, new THREE.MeshBasicMaterial({ color: 0xED2B12 })])
@@ -67,9 +67,9 @@ const loadImage = async (imgPath: string, scene: THREE.Scene, delta = 0) => {
   scene.add(plane)
   function animate(time: number) {
     requestAnimationFrame(animate)
-    plane.position.z = Math.cos(Math.PI * 2 * (delta + time / 60000)) * 5
-    plane.position.x = Math.sin(Math.PI * 2 * (delta + time / 60000)) * 10
-    plane.position.y = Math.sin(Math.PI * 2 * (delta + time /5000)) * 0.2
+    plane.position.z = Math.cos(Math.PI * 2 * (delta + time / 60000)) * 4
+    plane.position.x = Math.sin(Math.PI * 2 * (delta + time / 60000)) * 9
+    plane.position.y = Math.sin(Math.PI * 2 * (delta + time /5000)) * 0.4
   }
   animate(0)
 }
@@ -84,13 +84,13 @@ onMounted(async () => {
   renderer.setSize(window.innerWidth, window.innerHeight)
   threeSceneRef.value.appendChild(renderer.domElement)
   const imgPathList = [
-    '/images/mydearbaby.jpg',
-    '/images/photo1.jpg',
-    '/images/photo2.jpg',
-    '/images/photo3.jpg',
-    '/images/photo4.jpg',
-    '/images/photo5.jpg',
-    '/images/photo6.jpg'
+    '/images/dummy1.png',
+    '/images/dummy2.png',
+    '/images/dummy3.png',
+    '/images/dummy4.png',
+    '/images/dummy5.png',
+    '/images/dummy6.png',
+    '/images/dummy7.png',
   ]
 
   const n = 20

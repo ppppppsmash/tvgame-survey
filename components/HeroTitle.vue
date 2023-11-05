@@ -25,20 +25,22 @@ const { addClass } = toRefs(props)
 
 <style>
 .st {
-  width: 400px;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 3.5rem;
-  font-family: 'ITC Benguiat W01';
-  font-weight: 800;
-  color: #1c0502;
-  text-shadow: -0.05rem -0.05rem 1px #ed2b12,
-      0.05rem -0.05rem 1px #ed2b12,
-      -0.05rem 0.05rem 1px #ed2b12,
-      0.05rem 0.05rem 1px #ed2b12,
-      0 0 15px #630100,
-      0 0 20px #450100;
-    letter-spacing: -2px;
+  @media screen and (max-width: 450px) {
+    max-width: 400px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-family: 'ITC Benguiat W01';
+    font-weight: 800;
+    color: #1c0502;
+    text-shadow: -0.05rem -0.05rem 1px #ed2b12,
+        0.05rem -0.05rem 1px #ed2b12,
+        -0.05rem 0.05rem 1px #ed2b12,
+        0.05rem 0.05rem 1px #ed2b12,
+        0 0 15px #630100,
+        0 0 20px #450100;
+      letter-spacing: -2px;
+  }
 }
 
 @media screen and (min-width: 450px) {

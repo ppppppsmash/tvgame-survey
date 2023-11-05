@@ -1,4 +1,4 @@
- <script setup>
+<script setup>
 defineProps({
   name: {
     type: Object,

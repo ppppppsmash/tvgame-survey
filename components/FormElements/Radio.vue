@@ -42,7 +42,7 @@ const radioHandler = (element) => {
   >
     <label>
       <h5
-        class="glitch font-neon font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]"
+        class="animate-analog font-neon font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]"
         :data-text="props.label"
       >
         {{ props.label }}

@@ -7,14 +7,14 @@
     class="w-full my-6 animate-slide-in-bottom"
   >
     <h5
-      class="glitch text-symbol text-left sm:text-center font-neon text-white text-md sm:text-2xl font-black
+      class="animate-analog tv-zoom-out-text text-symbol text-left sm:text-center font-neon text-white text-md sm:text-2xl font-black
         leading-[2.5rem] mb-8"
       data-text="ご回答いただきありがとうございました"
     >
       ご回答いただきありがとうございました
     </h5>
     <div
-      class="tv-zoom-out w-full mx-auto flex justify-center"
+      class="tv-zoom-out w-full mx-auto flex justify-center mt-4"
     >
       <img
         src="/images/tv.png"
@@ -28,7 +28,7 @@
         autoplay
         playsinline
         conntrols
-        class="w-1/3 mr-16 mt-5"
+        class="w-1/3 mr-8 mt-2 sm:mr-16 sm:mt-5"
       >
         <source
           src="/video/ghostbusters.mp4"
@@ -48,6 +48,10 @@
 	animation: zoom-out 40s ease-in-out forwards;
 }
 
+.tv-zoom-out-text {
+	animation: zoom-out-text 40s ease-in-out forwards;
+}
+
 .neonText {
   animation: neon1 1.5s ease-in-out infinite alternate;
 }
@@ -63,16 +67,13 @@
   } 
 }
 
-@keyframes neon1 {
-  /* from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #DC2626,
-      0 0 70px #DC2626, 0 0 80px #DC2626, 0 0 100px #DC2626, 0 0 150px #DC2626;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #DC2626,
-      0 0 35px #DC2626, 0 0 40px #DC2626, 0 0 50px #DC2626, 0 0 75px #DC2626;
-  } */
+@keyframes zoom-out-text {
+  100% {
+    transform: translateY(100px) scale(0)
+  } 
+}
 
+@keyframes neon1 {
   from {
     text-shadow: 0 0 10px #fff,
       0 0 20px  #fff,
@@ -106,7 +107,7 @@
     }
 }
 
-.glitch {
+.animate-analog {
   margin:0 auto;
 }
 @keyframes noise-anim {
@@ -120,7 +121,7 @@
 
 #thanks {
   @media screen and (min-width:450) {
-    .glitch:after {
+    .animate-analog:after {
       content: attr(data-text);
       position: absolute;
       left: 21%;
@@ -132,7 +133,7 @@
       clip: rect(0,900px,0,0); 
       animation: noise-anim 2s infinite linear alternate-reverse;
     }
-    .glitch:before {
+    .animate-analog:before {
       content: attr(data-text);
       position: absolute;
       left: 21%;
@@ -147,7 +148,7 @@
   }
 }
 
-.glitch:after {
+.animate-analog:after {
   content: attr(data-text);
   position: absolute;
   left: 2px;
@@ -168,7 +169,7 @@
     }
   }
 }
-.glitch:before {
+.animate-analog:before {
   content: attr(data-text);
   position: absolute;
   left: -2px;

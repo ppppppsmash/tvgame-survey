@@ -26,7 +26,7 @@ const reset = () => {
   formStore.name = ''
   formStore.nameCheck = false
   formStore.progress = 0
-  router.push({ path: '/survey' })
+  router.push({ path: '/' })
 }
 </script>
 
