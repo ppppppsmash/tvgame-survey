@@ -55,7 +55,7 @@ const handleNext = () => {
 
     <div>
       <button
-        class="w-[80px] h-[30px] sm:w-[100px] sm:h-[40px] bg-symbol text-white rounded-sm"
+        class="w-[80px] h-[30px] sm:w-[100px] sm:h-[40px] bg-symbol text-white rounded-sm focus:scale-[0.95]"
         :class="isClick ? 'focus:animate-flicker' : ''"
         type="button"
         @click="handleNext"

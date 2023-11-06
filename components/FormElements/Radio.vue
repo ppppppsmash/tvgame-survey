@@ -56,7 +56,8 @@ const radioHandler = (element) => {
         class="my-2"
       >
         <label
-          class="block relative border-2 border-symbol border-solid px-4 py-2 sm:px-8 sm:py-6 cursor-pointer"
+          class="block relative border-2 border-symbol border-solid px-4 py-2 sm:px-8 sm:py-6
+            cursor-pointer group hover:bg-symbol"
           :class="radioHandler(choice)"
           @click="formStore.satisfaction = choice"
         >
@@ -67,7 +68,7 @@ const radioHandler = (element) => {
             class="hidden"
           />
           <span
-            class="font-neon text-md sm:text-lg font-serif"
+            class="font-neon text-md sm:text-lg font-serif group-hover:text-[#000000]"
             :class="radioHandler(choice)"
           >
             {{ choice }}
@@ -77,7 +78,7 @@ const radioHandler = (element) => {
     </div>
 
     <NextButton
-    :class="[isShow ? 'block animate-scale-in-center' : 'hidden animate-scale-out-center']"
+      :class="[isShow ? 'block animate-scale-in-center' : 'hidden animate-scale-out-center']"
       @click="handleNext"
       :name="props.buttonText"
     />
