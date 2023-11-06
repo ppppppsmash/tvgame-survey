@@ -52,11 +52,11 @@ const checkHandler = (choice) => {
       <div
         v-for="(choice, index) in props.options.choices"
         :key="index"
-        class="my-2 border border-symbol px-4 py-2"
+        class="my-2 border border-symbol px-4 py-2 hover:bg-symbol"
         :class="checkHandler(choice)"
       >
         <label
-          class="block relative cursor-pointer"
+          class="block relative cursor-pointer group"
           @click="checkHandler(choice)"
         >
           <input
@@ -66,7 +66,7 @@ const checkHandler = (choice) => {
             class="hidden"
           >
           <span
-            class="neon text-md sm:text-lg font-neon"
+            class="neon text-md sm:text-lg font-neon group-hover:text-[#000000]"
             :class="checkHandler(choice)"
           >{{ choice }}</span>
         </label>

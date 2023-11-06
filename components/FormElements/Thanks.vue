@@ -45,11 +45,11 @@
 }
 
 .tv-zoom-out {
-	animation: zoom-out 40s ease-in-out forwards;
+	animation: zoom-out 20s ease-in-out forwards;
 }
 
 .tv-zoom-out-text {
-	animation: zoom-out-text 40s ease-in-out forwards;
+	animation: zoom-out-text 20s ease-in-out forwards;
 }
 
 .neonText {
@@ -68,9 +68,17 @@
 }
 
 @keyframes zoom-out-text {
-  100% {
-    transform: translateY(100px) scale(0)
-  } 
+    100% {
+      transform: translateY(60px) scale(0)
+    } 
+  }
+
+@media screen and (min-width:450) {
+  @keyframes zoom-out-text {
+    100% {
+      transform: translateY(500px) scale(0)
+    } 
+  }
 }
 
 @keyframes neon1 {
