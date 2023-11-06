@@ -14,8 +14,8 @@ const propsValue = defineProps({
 const { props } = toRefs(propsValue)
 
 const progressStatus = computed(() => {
-  console.log(formStore.progress, props.value.length)
-  return (formStore.progress + 1) / props.value.length * 100
+  console.log(formStore.progress / props.value.length * 100)
+  return formStore.progress / props.value.length * 100
 })
 
 watchEffect(() => {
@@ -43,16 +43,21 @@ watchEffect(() => {
 <template>
   <div
     v-if="!formStore.nameCheck"
-    class="fixed sm:right-[20%] bottom-[10%] sm:bottom-[10.5%]"
+    class="fixed sm:right-[14%] bottom-[10%] sm:bottom-[11%]"
   >
     <div class="flex items-center gap-x-4 w-[260px] sm:w-[280px]">
-      <div class="progress-bar w-6/12 h-3 relative bg-black border-symbol border-2 border-solid">
-        <div
+      <!-- <div class="progress-bar w-6/12 h-3 relative bg-black border-symbol border-2 border-solid">
+        <p
           class="progress-bar-inner absolute h-full bg-symbol"
           :style="'width:'+ progressStatus + '%'"
-        />
-      </div>
-      <p class="w-4/12 font-symbol text-symbol text-md sm:text-lg">{{formStore.progress + 1}} / {{ props.length }}</p>
+        ></p>
+      </div> -->
+      <Icon name="simple-icons:googleforms" class="text-symbol w-6 h-6" />
+      <p
+        class="w-4/12 font-neon text-symbol text-md sm:text-lg"
+      >
+        {{ formStore.progress + 1 }} / {{ props.length }}
+      </p>
     </div>
   </div>
 </template>
