@@ -52,7 +52,7 @@ export const formConfig = [
   },
   {
     type: 'text',
-    label: '名前（省略可）',
+    label: '名前',
     name: 'entry.1223500353',
     buttonText: 'SEND',
     options: {
