@@ -16,25 +16,27 @@
     <div
       class="tv-zoom-out w-full mx-auto flex justify-center mt-4"
     >
-      <img
-        src="/images/tv.png"
-        width="240"
-        class="tv absolute w-1/2 z-30"
-        style="animationDelay: 3.4s"
-      />
-
-      <video
-        loop
-        autoplay
-        playsinline
-        conntrols
-        class="z-20 sm:w-[330px] w-1/2 left-0 sm:mr-12 sm:mt-7"
-      >
-        <source
-          src="/video/game.mp4"
-          type="video/mp4"
+      <div class="relative">
+        <img
+          src="/images/tv.png"
+          width="240"
+          class="tv absolute w-full z-30"
+          style="animationDelay: 3.4s"
         />
-      </video>
+
+        <video
+          loop
+          autoplay
+          playsinline
+          conntrols
+          class="z-20 left-0 sm:w-[330px]"
+        >
+          <source
+            src="/video/game.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
     </div>
   </div>
 </template>
