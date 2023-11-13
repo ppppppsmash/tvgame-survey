@@ -31,7 +31,7 @@
         class="w-1/3 mr-8 mt-2 sm:mr-16 sm:mt-5"
       >
         <source
-          src="/video/ghostbusters.mp4"
+          src="/video/game.mp4"
           type="video/mp4"
         />
       </video>
