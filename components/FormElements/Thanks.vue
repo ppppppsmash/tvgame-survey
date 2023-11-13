@@ -7,7 +7,7 @@
     class="w-full my-6 animate-slide-in-bottom"
   >
     <h5
-      class="animate-analog tv-zoom-out-text text-symbol text-left sm:text-center font-neon text-white text-md sm:text-2xl font-black
+      class="animate-analog tv-zoom-out-text text-symbol text-center font-neon text-white text-md sm:text-2xl font-black
         leading-[2.5rem] mb-8"
       data-text="ご回答いただきありがとうございました"
     >
@@ -19,7 +19,7 @@
       <img
         src="/images/tv.png"
         width="240"
-        class="tv absolute w-1/2"
+        class="tv absolute w-1/2 z-30"
         style="animationDelay: 3.4s"
       />
 
@@ -28,7 +28,7 @@
         autoplay
         playsinline
         conntrols
-        class="w-1/3 mr-8 mt-2 sm:mr-16 sm:mt-5"
+        class="z-20 sm:w-[330px] w-1/2 left-0 sm:mr-12 sm:mt-7"
       >
         <source
           src="/video/game.mp4"
