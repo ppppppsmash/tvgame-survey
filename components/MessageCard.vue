@@ -50,6 +50,10 @@ const handleNext = () => {
         >
           ご意見・ご感想をお聞かせくださいますようお願いします。
         </p>
+        <p
+          class="animate-analog relative font-neon text-sm sm:text-lg text-symbol"
+          data-text="ご意見・ご感想をお聞かせくださいますようお願いします。"
+        ><small>BGMが流れているので、音量を下げてください。</small></p>
       </div>
     </div>
 
