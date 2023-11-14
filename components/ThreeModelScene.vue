@@ -84,13 +84,19 @@ onMounted(async () => {
   renderer.setSize(window.innerWidth, window.innerHeight)
   threeSceneRef.value.appendChild(renderer.domElement)
   const imgPathList = [
-    '/images/dummy1.png',
-    '/images/dummy2.png',
-    '/images/dummy3.png',
-    '/images/dummy4.png',
-    '/images/dummy5.png',
-    '/images/dummy6.png',
-    '/images/dummy7.png',
+    '/images/photo1.jpg',
+    '/images/photo2.jpg',
+    '/images/photo3.jpg',
+    '/images/photo4.jpg',
+    '/images/photo5.jpg',
+    '/images/photo6.jpg',
+    '/images/photo7.jpg',
+    '/images/photo8.jpg',
+    '/images/photo9.jpg',
+    '/images/photo10.jpg',
+    '/images/photo11.jpg',
+    '/images/photo12.jpg',
+    '/images/photo13.jpg',
   ]
 
   const n = 20
