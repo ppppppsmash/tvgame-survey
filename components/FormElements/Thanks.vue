@@ -13,7 +13,7 @@
     >
       ご回答いただきありがとうございました
     </h5>
-    <div
+    <!-- <div
       class="tv-zoom-out w-full mx-auto flex justify-center mt-4"
     >
       <div class="relative">
@@ -24,12 +24,14 @@
           style="animationDelay: 3.4s"
         />
 
+        <p class="noise-bg h-full" />
+
         <video
           loop
           autoplay
           playsinline
           conntrols
-          class="z-20 left-0 sm:w-[330px]"
+          class="z-20 left-0"
         >
           <source
             src="/video/game.mp4"
@@ -37,7 +39,13 @@
           />
         </video>
       </div>
-    </div>
+    </div> -->
+    <RetroTV
+      zoom="tv-zoom-out"
+      noise="hidden"
+      video="block"
+      url="/video/game.mp4"
+    />
   </div>
 </template>
 
@@ -47,7 +55,7 @@
 }
 
 .tv-zoom-out {
-	animation: zoom-out 20s ease-in-out forwards;
+	animation: zoom-out 35s ease-in-out forwards;
 }
 
 .tv-zoom-out-text {
@@ -70,10 +78,24 @@
 }
 
 @keyframes zoom-out-text {
-    100% {
-      transform: translateY(60px) scale(0)
-    } 
+  100% {
+    transform: translateY(60px) scale(0)
   }
+}
+
+.noise-bg {
+  background: 
+    repeating-radial-gradient(#000 0 0.0001%,#fff 0 0.0002%) 50% 0/2500px 2500px,
+    repeating-conic-gradient(#000 0 0.0001%,#fff 0 0.0002%) 60% 60%/2500px 2500px;
+  background-blend-mode: difference;
+  animation: noise .2s infinite alternate;
+}
+
+@keyframes noise {
+  100% {
+    background-position: 50% 0, 60% 50%
+  }
+}
 
 @media screen and (min-width:450) {
   @keyframes zoom-out-text {

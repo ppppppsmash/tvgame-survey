@@ -43,7 +43,7 @@ watchEffect(() => {
 <template>
   <div
     v-if="!formStore.nameCheck"
-    class="fixed sm:right-[14%] bottom-[10%] sm:bottom-[11%]"
+    class="fixed sm:right-[18%] bottom-[8%] sm:bottom-[9.5%]"
   >
     <div class="flex items-center gap-x-4 w-[260px] sm:w-[280px]">
       <!-- <div class="progress-bar w-6/12 h-3 relative bg-black border-symbol border-2 border-solid">
@@ -52,12 +52,23 @@ watchEffect(() => {
           :style="'width:'+ progressStatus + '%'"
         ></p>
       </div> -->
-      <Icon name="simple-icons:googleforms" class="text-symbol w-6 h-6" />
+      <!-- <Icon name="simple-icons:googleforms" class="text-symbol w-6 h-6" /> -->
+
+      <div class="">
+        <RetroTV
+          zoom="!mt-0 block h-full"
+          noise="noise-bg z-20 left-0 w-[100px] h-[60px]"
+          video="hidden"
+          url="/video/game_opening.mp4"
+        />
+      </div>
       <p
         class="w-4/12 font-neon text-symbol text-md sm:text-lg"
       >
         {{ formStore.progress + 1 }} / {{ props.length }}
       </p>
+
+      
     </div>
   </div>
 </template>
