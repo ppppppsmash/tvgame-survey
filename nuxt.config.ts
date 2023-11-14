@@ -36,5 +36,37 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     exposeConfig: true
+  },
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width',
+      title: 'ウェブクルー ゲーム会終了後アンケート',
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico'
+        }
+      ],
+      meta: [
+        {
+          name: 'description',
+          content: 'ゲーム会終了後アンケート, Created by liming.pei'
+        },
+        {
+          name: 'keywords',
+          content: 'テレビゲーム,ウェブクルーのゲーム会'
+        },
+        {
+          name: 'og:locale',
+          content: 'ja_JP'
+        }
+      ],
+      htmlAttrs: {
+        lang: 'ja',
+        prefix: 'og: https://ogp.me/ns#'
+      }
+    }
   }
 })
