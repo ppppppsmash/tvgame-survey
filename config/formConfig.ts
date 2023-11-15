@@ -6,10 +6,9 @@ export const formConfig = [
     buttonText: 'NEXT',
     options: {
       choices: [
-        'マリオカート部屋1',
-        'マリオカート部屋2',
+        'マリオカート',
         'スマブラ',
-        'マリオパーティー部屋'
+        'マリオパーティー'
       ]
     }
   },
