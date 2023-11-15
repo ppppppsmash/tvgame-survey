@@ -62,12 +62,23 @@ const bgmHandler = () => {
 
       
       <div class="relative">
-        <RetroTV
-          zoom="!mt-0 block h-full"
-          :noise="isBGM ? 'noise-bg z-20 left-0 w-[100px] h-[60px]' : 'z-20 left-0 w-[100px] h-[60px]'"
-          video="hidden"
-          :url="isBGM ? '/video/game_opening.mp4' : ''"
-        />
+
+        <div v-if="isBGM">
+          <RetroTV
+            zoom="!mt-0 block h-full"
+            :noise="isBGM ? 'noise-bg z-20 left-0 w-[100px] h-[60px]' : 'z-20 left-0 w-[100px] h-[60px]'"
+            video="hidden"
+            url="/video/game_opening.mp4"
+          />
+        </div>
+        <div v-else>
+          <RetroTV
+            zoom="!mt-0 block h-full"
+            :noise="isBGM ? 'noise-bg z-20 left-0 w-[100px] h-[60px]' : 'z-20 left-0 w-[100px] h-[60px]'"
+            video="hidden"
+            url=""
+          />
+        </div>
         <div
           class="absolute z-50 top-1/3 left-1/4 bottom-0 cursor-pointer"
           :class="isBGM ? 'hidden' : 'block'"
