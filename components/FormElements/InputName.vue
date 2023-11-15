@@ -35,8 +35,7 @@ const handleNext = async () => {
   formData.append('entry.284512661', formStore.event)
   formData.append('entry.1223500353', formStore.name)
   
-  // prod: https://docs.google.com/forms/u/0/d/e/1FAIpQLSdVuu4hMHbNgbldWMQS-hfQBFmr3w5XLNJJhKaZxo7dHhRSzg/formResponse
-  const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfQMcMsooTvXt7qZWiRPbXxT0BDnpV5rLkfQDBoALUi6wM1Iw/formResponse'
+  const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdVuu4hMHbNgbldWMQS-hfQBFmr3w5XLNJJhKaZxo7dHhRSzg/formResponse'
   const { data, pending, error, refresh } = await useAsyncData(
     'formData',
     () => $fetch(GOOGLE_FORM_ACTION, {
