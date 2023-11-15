@@ -1,7 +1,7 @@
 export const formConfig = [
   {
     type: 'checkbox',
-    label: 'どの部屋で遊びましたか？',
+    label: '*どの部屋で遊びましたか？',
     name: 'entry.1666306676',
     buttonText: 'NEXT',
     options: {
@@ -14,7 +14,7 @@ export const formConfig = [
   },
   {
     type: 'radio',
-    label: 'イベントはどのくらい満足しましたか。',
+    label: '*イベントはどのくらい満足しましたか。',
     name: 'entry.1747016377',
     buttonText: 'NEXT',
     options: {

@@ -73,7 +73,7 @@ const handleNext = async () => {
     </div>
 
     <NextButton
-    :class="[isShow ? 'block animate-scale-in-center' : 'hidden animate-scale-out-center']"
+      class="block animate-scale-in-center"
       @click="handleNext"
       :name="props.buttonText"
     />

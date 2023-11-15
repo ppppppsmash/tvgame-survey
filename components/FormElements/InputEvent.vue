@@ -12,11 +12,6 @@ const formStore = useFormStore()
 
 const isClick = ref(false)
 
-const isShow = ref(false)
-watchEffect(() => {
-  isShow.value = formStore.event ? true : false
-})
-
 const handleNext = () => {
   setTimeout(() => {
     formStore.eventCheck = true
@@ -53,7 +48,7 @@ const handleNext = () => {
     </div>
 
     <NextButton
-    :class="[isShow ? 'block animate-scale-in-center' : 'hidden animate-scale-out-center']"
+      class="block animate-scale-in-center"
       @click="handleNext"
       :name="props.buttonText"
     />
