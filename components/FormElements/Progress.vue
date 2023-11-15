@@ -38,6 +38,12 @@ watchEffect(() => {
     console.log(`まだいけます！`)
   }
 })
+
+const isBGM = ref(false)
+
+const bgmHandler = () => {
+  isBGM.value = !isBGM.value
+}
 </script>
 
 <template>
@@ -54,13 +60,35 @@ watchEffect(() => {
       </div> -->
       <!-- <Icon name="simple-icons:googleforms" class="text-symbol w-6 h-6" /> -->
 
-      <div class="">
+      
+      <div class="relative">
         <RetroTV
           zoom="!mt-0 block h-full"
-          noise="noise-bg z-20 left-0 w-[100px] h-[60px]"
+          :noise="isBGM ? 'noise-bg z-20 left-0 w-[100px] h-[60px]' : 'z-20 left-0 w-[100px] h-[60px]'"
           video="hidden"
-          url="/video/game_opening.mp4"
+          :url="isBGM ? '/video/game_opening.mp4' : ''"
         />
+        <div
+          class="absolute z-50 top-1/3 left-1/4 bottom-0 cursor-pointer"
+          :class="isBGM ? 'hidden' : 'block'"
+          @click="bgmHandler"
+        >
+          <Icon
+            name="fluent-emoji-high-contrast:musical-notes"
+            class="animate-bounce text-center text-symbol w-7 h-7 z-50"
+          />
+        </div>
+
+        <div
+          class="absolute z-50 top-1/3 left-1/4 bottom-0 cursor-pointer"
+          :class="isBGM ? 'block' : 'hidden'"
+          @click="bgmHandler"
+        >
+          <Icon
+            name="fluent-emoji-high-contrast:muted-speaker"
+            class="text-symbol w-7 h-7"
+          />
+        </div>
       </div>
       <p
         class="w-4/12 font-neon text-symbol text-md sm:text-lg"
