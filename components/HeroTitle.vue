@@ -8,11 +8,16 @@ const { addClass } = toRefs(props)
     <div class="st">
 
       <div class="st-top">
-        <!-- <div class="st-bound st-bound-full"></div> -->
-        <p><span class="st-drop st-stranger-s">W</span><span class="st-stranger-t">e</span><span class="st-stranger-r">b</span><span class="st-stranger-a">C</span><span class="st-stranger-n">r</span><span class="st-stranger-g">e</span><span class="st-stranger-e">w</span>
+        <p>
+          <span class="st-drop st-stranger-s">K</span>
+          <span class="st-stranger-t">u</span>
+          <span class="st-stranger-r">r</span>
+          <span class="st-stranger-a">o</span>
+          <span class="st-stranger-n">s</span>
+          <span class="st-stranger-g">a</span>
+          <span class="st-stranger-e">w</span>
+          <span class="st-stranger-g">a</span>
         </p>
-        <!-- <div class="st-bound st-bound-mini st-bound-left"></div>
-        <div class="st-bound st-bound-mini st-bound-right"></div> -->
       </div>
 
       <div class="st-bottom">

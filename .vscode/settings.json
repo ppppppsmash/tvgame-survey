@@ -1,8 +1,8 @@
 {
   "nuxt.isNuxtApp": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.organizeImports": false,
-    "eslint.validate": true
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never",
+    "eslint.validate": "explicit"
   }
 }
