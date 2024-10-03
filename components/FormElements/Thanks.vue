@@ -44,7 +44,6 @@
       zoom="tv-zoom-out"
       noise="hidden"
       video="block"
-      url="/video/game.mp4"
     />
   </div>
 </template>

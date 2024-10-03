@@ -41,7 +41,7 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width',
-      title: 'ウェブクルー ゲーム会終了後アンケート',
+      title: 'Kurosawa Game Survey',
       link: [
         {
           rel: 'icon',
@@ -52,11 +52,11 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'description',
-          content: 'ゲーム会終了後アンケート, Created by liming.pei'
+          content: 'Kurosawa Game Survey, Created by arata kurosawa'
         },
         {
           name: 'keywords',
-          content: 'テレビゲーム,ウェブクルーのゲーム会'
+          content: 'tv game, survey'
         },
         {
           name: 'og:locale',
