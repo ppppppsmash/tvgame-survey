@@ -1,8 +1,8 @@
 <script setup>
 useSeoMeta({
-  title: 'WebCrew Inc. After-Game Survey',
-  description: 'ウェブクルー ゲーム会終了後アンケート, After-Game Survey, Created by liming.pei',
-  ogTitle: 'ウェブクルー ゲーム会終了後アンケート',
+  title: 'Kurosawa Game Survey',
+  description: 'Kurosawa Game Survey, Created by arata kurosawa',
+  ogTitle: 'Kurosawa Game Survey',
   ogImage: '',
   ogUrl: ''
 })
