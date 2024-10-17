@@ -8,6 +8,19 @@ defineProps({
   },
 })
 
+const iconArray = [
+  'game-icons:pistol-gun',
+  'game-icons:running-ninja',
+  'game-icons:puzzle',
+  'game-icons:elven-castle',
+  'game-icons:card-exchange',
+  'game-icons:swords-emblem',
+  'game-icons:f1-car',
+  'game-icons:baseball-bat',
+  'game-icons:archery-target',
+  'game-icons:help',
+]
+
 const formStore = useFormStore()
 
 const isClick = ref(false)
@@ -33,6 +46,16 @@ const checkHandler = (choice) => {
     return 'text-symbol'
   }
 }
+
+const toggleChoice = (choice) => {
+  const index = formStore.rooms.indexOf(choice)
+  if (index > -1) {
+    formStore.rooms.splice(index, 1)
+  } else {
+    formStore.rooms.push(choice)
+  }
+}
+
 </script>
 
 <template>
@@ -48,16 +71,23 @@ const checkHandler = (choice) => {
       >{{ props.label }}</h5>
     </label>
 
-    <div class="my-8">
+    <div class="my-8 flex flex-wrap gap-4">
       <div
         v-for="(choice, index) in props.options.choices"
         :key="index"
-        class="my-2 border border-symbol px-4 py-2 group hover:bg-symbol"
+        class="my-2 border border-symbol px-4 py-2 group hover:bg-symbol
+          md:w-[180px] md:h-[120px] flex flex-col justify-center items-center
+          w-[100px] h-[100px] transition-all duration-300 cursor-pointer"
         :class="checkHandler(choice)"
+        @click="toggleChoice(choice)"
       >
+        <Icon
+          :name="iconArray[index]"
+          class="text-4xl group-hover:text-[#000000]"
+          :class="checkHandler(choice)"
+        />
         <label
-          class="block relative cursor-pointer"
-          @click="checkHandler(choice)"
+          class="block relative mt-3"
         >
           <input
             :type="props.type"
