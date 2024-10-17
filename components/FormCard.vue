@@ -32,7 +32,7 @@ const reset = () => {
 
 <template>
   <form class="text-white w-full relative">
-    <FormElementsCheckBox
+    <FormElementsCheckBoxSec
       :props="formConfig[0]"
     />
 
