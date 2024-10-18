@@ -17,7 +17,7 @@ const reset = () => {
   formStore.roomsShow = true
   formStore.rooms = []
   formStore.roomsCheck = false
-  formStore.satisfaction = ''
+  formStore.satisfaction = []
   formStore.satisfactionCheck = false
   formStore.feedback = ''
   formStore.feedbackCheck = false
@@ -37,7 +37,7 @@ const reset = () => {
     />
 
     <div v-if="formStore.roomsCheck">
-      <FormElementsRadio
+      <FormElementsCheckBox
         :props="formConfig[1]"
       />
     </div>
@@ -48,15 +48,15 @@ const reset = () => {
       />
     </div>
 
-    <div v-if="formStore.feedbackCheck">
+    <!-- <div v-if="formStore.feedbackCheck">
       <FormElementsInputEvent
         :props="formConfig[3]"
       />
-    </div>
+    </div> -->
 
-    <div v-if="formStore.eventCheck">
+    <div v-if="formStore.feedbackCheck">
       <FormElementsInputName
-        :props="formConfig[4]"
+        :props="formConfig[3]"
       />
     </div>
 

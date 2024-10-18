@@ -68,5 +68,10 @@ export default defineNuxtConfig({
         prefix: 'og: https://ogp.me/ns#'
       }
     }
+  },
+  runtimeConfig: {
+    public: {
+      googleFormAction: ''
+    }
   }
 })

@@ -17,10 +17,13 @@ watchEffect(() => {
   isShow.value = formStore.name ? true : false
 })
 
+const runtimeConfig = useRuntimeConfig()
+const GOOGLE_FORM_ACTION = runtimeConfig.public.googleFormAction
+
 const handleNext = async () => {
   setTimeout(() => {
     formStore.nameCheck = true
-    formStore.eventCheck = false
+    formStore.feedbackCheck = false
   }, 1000)
 
   isClick.value = true
@@ -28,14 +31,16 @@ const handleNext = async () => {
   const formData = new FormData()
 
   formStore.rooms.forEach((value) => {
-    formData.append('entry.1666306676', value)
+    formData.append('entry.434867502', value)
   })
-  formData.append('entry.1747016377', formStore.satisfaction)
-  formData.append('entry.879050699', formStore.feedback)
-  formData.append('entry.284512661', formStore.event)
-  formData.append('entry.1223500353', formStore.name)
-  
-  const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfQMcMsooTvXt7qZWiRPbXxT0BDnpV5rLkfQDBoALUi6wM1Iw/formResponse'
+
+  formStore.satisfaction.forEach((value) => {
+    formData.append('entry.1328896341', value)
+  })
+
+  formData.append('entry.1211019803', formStore.feedback)
+  formData.append('entry.552695026', formStore.name)
+
   const { data, pending, error, refresh } = await useAsyncData(
     'formData',
     () => $fetch(GOOGLE_FORM_ACTION, {

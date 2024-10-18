@@ -71,12 +71,12 @@ const toggleChoice = (choice) => {
       >{{ props.label }}</h5>
     </label>
 
-    <div class="my-8 flex flex-wrap gap-4">
+    <div class="my-2 flex flex-wrap gap-4">
       <div
         v-for="(choice, index) in props.options.choices"
         :key="index"
         class="my-2 border border-symbol px-4 py-2 group hover:bg-symbol
-          md:w-[180px] md:h-[120px] flex flex-col justify-center items-center
+          sm:w-[140px] sm:h-[100px] flex flex-col justify-center items-center
           w-[100px] h-[100px] transition-all duration-300 cursor-pointer"
         :class="checkHandler(choice)"
         @click="toggleChoice(choice)"
@@ -96,7 +96,7 @@ const toggleChoice = (choice) => {
             class="hidden"
           >
           <span
-            class="neon text-md sm:text-lg font-neon group-hover:text-[#000000]"
+            class="neon text-xs md:text-md font-neon group-hover:text-[#000000]"
             :class="checkHandler(choice)"
           >{{ choice }}</span>
         </label>
