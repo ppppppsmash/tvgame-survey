@@ -27,12 +27,14 @@ const handleNext = () => {
 }
 
 const checkHandler = (choice) => {
-  if (formStore.rooms.includes(choice)) {
+  if (formStore.satisfaction.includes(choice)) {
     return 'font-black bg-symbol'
   } else {
     return 'text-symbol'
   }
 }
+
+console.log(formStore.satisfaction)
 </script>
 
 <template>
@@ -51,12 +53,12 @@ const checkHandler = (choice) => {
       <div
         v-for="(choice, index) in props.options.choices"
         :key="index"
-        class="my-2 border border-symbol px-4 py-2 group hover:bg-symbol"
+        class="my-2 border border-symbol px-4 py-2 group hover:bg-symbol transition-all duration-300 cursor-pointer"
         :class="checkHandler(choice)"
+        @click="checkHandler(choice)"
       >
         <label
           class="block relative cursor-pointer"
-          @click="checkHandler(choice)"
         >
           <input
             :type="props.type"

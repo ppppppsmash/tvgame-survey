@@ -43,16 +43,7 @@ const checkHandler = (choice) => {
   if (formStore.rooms.includes(choice)) {
     return 'font-black bg-symbol'
   } else {
-    return 'text-symbol'
-  }
-}
-
-const toggleChoice = (choice) => {
-  const index = formStore.rooms.indexOf(choice)
-  if (index > -1) {
-    formStore.rooms.splice(index, 1)
-  } else {
-    formStore.rooms.push(choice)
+    return 'text-symbol bg-transparent'
   }
 }
 
@@ -79,12 +70,13 @@ const toggleChoice = (choice) => {
           sm:w-[140px] sm:h-[100px] flex flex-col justify-center items-center
           w-[100px] h-[100px] transition-all duration-300 cursor-pointer"
         :class="checkHandler(choice)"
-        @click="toggleChoice(choice)"
+        @click="checkHandler(choice)"
       >
         <Icon
           :name="iconArray[index]"
           class="text-4xl group-hover:text-[#000000]"
           :class="checkHandler(choice)"
+          @click="checkHandler(choice)"
         />
         <label
           class="block relative mt-3"
