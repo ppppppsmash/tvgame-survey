@@ -14,13 +14,13 @@ const isClick = ref(false)
 
 const isShow = ref(false)
 watchEffect(() => {
-  isShow.value = formStore.rooms.length ? true : false
+  isShow.value = formStore.satisfaction.length ? true : false
 })
 
 const handleNext = () => {
   setTimeout(() => {
-    formStore.roomsCheck = true
-    formStore.roomsShow = false
+    formStore.satisfactionCheck = true
+    formStore.roomsCheck = false
   }, 1000)
 
   isClick.value = true
@@ -37,7 +37,6 @@ const checkHandler = (choice) => {
 
 <template>
   <div
-    v-if="formStore.roomsShow"
     :class="isClick ? 'animate-slide-out-top' : ''"
     class="animate-slide-in-bottom"
   >
@@ -62,7 +61,7 @@ const checkHandler = (choice) => {
           <input
             :type="props.type"
             :value="choice"
-            v-model="formStore.rooms"
+            v-model="formStore.satisfaction"
             class="hidden"
           >
           <span

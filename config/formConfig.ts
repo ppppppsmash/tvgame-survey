@@ -19,23 +19,26 @@ export const formConfig = [
     }
   },
   {
-    type: 'radio',
-    label: '*イベントはどのくらい満足しましたか。',
+    type: 'checkbox',
+    label: '*どのゲームをプレイしたいですか？（複数可）',
     name: 'entry.1747016377',
     buttonText: 'NEXT',
     options: {
       choices: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5'
+        'スプラトゥーン3',
+        'Dead by Daylight',
+        'モンスターハンターライズ',
+        'マリオカート',
+        'あつまれどうぶつの森',
+        'ポケットモンスター(スカーレット／バイオレット)',
+        'Minecraft',
+        'Eggy Party'
       ]
     }
   },
   {
     type: 'text',
-    label: 'イベント全体についてのフィードバックがありましたら、記入お願いします。',
+    label: 'ほかにプレイしたいゲームがありましたら、記入してください.',
     name: 'entry.879050699',
     buttonText: 'NEXT',
     options: {
@@ -44,17 +47,17 @@ export const formConfig = [
       }
     }
   },
-  {
-    type: 'text',
-    label: 'その他開催してほしいイベントはありますでしょうか。',
-    name: 'entry.284512661',
-    buttonText: 'NEXT',
-    options: {
-      attrs: {
-        placeholder: '入力...'
-      }
-    }
-  },
+  // {
+  //   type: 'text',
+  //   label: 'その他開催してほしいイベントはありますでしょうか。',
+  //   name: 'entry.284512661',
+  //   buttonText: 'NEXT',
+  //   options: {
+  //     attrs: {
+  //       placeholder: '入力...'
+  //     }
+  //   }
+  // },
   {
     type: 'text',
     label: '名前',
