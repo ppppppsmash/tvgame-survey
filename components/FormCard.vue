@@ -54,9 +54,9 @@ const reset = () => {
       />
     </div> -->
 
-    <div v-if="formStore.eventCheck">
+    <div v-if="formStore.feedbackCheck">
       <FormElementsInputName
-        :props="formConfig[4]"
+        :props="formConfig[3]"
       />
     </div>
 

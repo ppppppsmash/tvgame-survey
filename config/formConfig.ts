@@ -60,7 +60,7 @@ export const formConfig = [
   // },
   {
     type: 'text',
-    label: '名前',
+    label: 'お名前',
     name: 'entry.1223500353',
     buttonText: 'SEND',
     options: {
