@@ -7,7 +7,7 @@ export const useFormStore = defineStore('form', {
     rooms: [],
     roomsShow: true,
     roomsCheck: false,
-    satisfaction: '',
+    satisfaction: [],
     satisfactionCheck: false,
     feedback: '',
     feedbackCheck: false,
