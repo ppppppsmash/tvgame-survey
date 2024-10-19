@@ -143,4 +143,9 @@ onMounted(async () => {
       'opacity-100': !loading,
     }"
   />
+
+  <div v-if="loading" class="absolute inset-0 flex items-center justify-center flex-col gap-y-2">
+    <Icon name="svg-spinners:pulse-3" class="text-symbol w-10 h-10" />
+    <p class="relative animate-analog animate-pulse font-neon text-symbol text-md">Loading...</p>
+  </div>
 </template>

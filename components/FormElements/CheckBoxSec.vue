@@ -15,8 +15,8 @@ const iconArray = [
   'game-icons:elven-castle',
   'game-icons:card-exchange',
   'game-icons:swords-emblem',
-  'game-icons:f1-car',
-  'game-icons:baseball-bat',
+  'game-icons:rocket',
+  'game-icons:american-football-helmet',
   'game-icons:archery-target',
   'game-icons:help',
 ]
