@@ -2,7 +2,7 @@ export const formConfig = [
   {
     type: 'checkbox',
     label: '*どんなのジャンルが好きですか？',
-    name: 'entry.1666306676',
+    name: 'entry.434867502',
     buttonText: 'NEXT',
     options: {
       choices: [
@@ -21,7 +21,7 @@ export const formConfig = [
   {
     type: 'checkbox',
     label: '*どのゲームをプレイしたいですか？（複数可）',
-    name: 'entry.1747016377',
+    name: 'entry.1328896341',
     buttonText: 'NEXT',
     options: {
       choices: [
@@ -39,7 +39,7 @@ export const formConfig = [
   {
     type: 'text',
     label: 'ほかにプレイしたいゲームがありましたら、記入してください.',
-    name: 'entry.879050699',
+    name: 'entry.1211019803',
     buttonText: 'NEXT',
     options: {
       attrs: {
@@ -61,7 +61,7 @@ export const formConfig = [
   {
     type: 'text',
     label: 'お名前',
-    name: 'entry.1223500353',
+    name: 'entry.552695026',
     buttonText: 'SEND',
     options: {
       attrs: {

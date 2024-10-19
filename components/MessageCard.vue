@@ -25,30 +25,30 @@ const handleNext = () => {
       <div class="mb-8">
         <p
           class="animate-analog relative font-neon mb-6 text-md sm:text-2xl text-symbol"
-          data-text="この度はゲーム会にご参加いただきありがとうございました！"
+          data-text="開催予定であるゲーム会のためのアンケートとなります。"
         >
-          この度はゲーム会にご参加いただきありがとうございました！
+          開催予定であるゲーム会のためのアンケートとなります。
         </p>
 
         <p
           class="animate-analog relative font-neon mb-6 text-md sm:text-2xl text-symbol"
-          data-text="楽しんでいただけましたでしょうか。"
+          data-text="日程の決定と参加意向アンケートにつきましては、"
         >
-          楽しんでいただけましたでしょうか。
+          日程の決定と参加意向アンケートにつきましては、
         </p>
       </div>
       <div>
         <p
           class="animate-analog relative font-neon text-md sm:text-2xl text-symbol"
-          data-text="皆さんからのフィードバックをもとに、今後のイベント開催の参考にさせていただきたいと思っております。"
+          data-text="また後日ご用意いたします。"
         >
-          皆さんからのフィードバックをもとに、今後のイベント開催の参考にさせていただきたいと思っております。
+        また後日ご用意いたします。
         </p>
         <p
           class="animate-analog relative font-neon text-md sm:text-2xl text-symbol"
-          data-text="ご意見・ご感想をお聞かせくださいますようお願いします。"
+          data-text="ご意見をお聞かせくださいますようお願いします。"
         >
-          ご意見・ご感想をお聞かせくださいますようお願いします。
+          ご意見をお聞かせくださいますようお願いします。
         </p>
       </div>
     </div>
