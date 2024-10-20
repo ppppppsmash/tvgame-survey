@@ -25,7 +25,7 @@ const reset = () => {
   formStore.eventCheck = false
   formStore.name = ''
   formStore.nameCheck = false
-  formStore.progress = 0
+  formStore.progress = 1
   location.href = '/'
 }
 </script>

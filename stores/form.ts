@@ -15,7 +15,7 @@ export const useFormStore = defineStore('form', {
     eventCheck: false,
     name: '',
     nameCheck: false,
-    progress: 0,
+    progress: 1,
     hasIncremented: false
   }),
   persist: true,

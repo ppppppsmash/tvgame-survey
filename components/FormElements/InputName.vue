@@ -18,7 +18,8 @@ watchEffect(() => {
 })
 
 const runtimeConfig = useRuntimeConfig()
-const GOOGLE_FORM_ACTION = runtimeConfig.public.googleFormAction
+//const GOOGLE_FORM_ACTION = runtimeConfig.public.googleFormAction
+const GOOGLE_FORM_ACTION = '222'
 
 const handleNext = async () => {
   setTimeout(() => {
