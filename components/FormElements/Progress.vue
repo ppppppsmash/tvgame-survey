@@ -12,9 +12,9 @@ const propsValue = defineProps({
 })
 
 const { props } = toRefs(propsValue)
-console.log(formStore.progress)
 
 const progressStatus = computed(() => {
+  console.log(formStore.progress / props.value.length * 100)
   return formStore.progress / props.value.length * 100
 })
 
@@ -49,9 +49,18 @@ const bgmHandler = () => {
 <template>
   <div
     v-if="!formStore.nameCheck"
-    class="fixed bottom-[8%] sm:bottom-[9.5%]"
+    class="fixed sm:right-[18%] bottom-[8%] sm:bottom-[9.5%]"
   >
-    <div class="flex items-center gap-x-4 w-[280px] sm:w-[360px]">
+    <div class="flex items-center gap-x-4 w-[260px] sm:w-[280px]">
+      <!-- <div class="progress-bar w-6/12 h-3 relative bg-black border-symbol border-2 border-solid">
+        <p
+          class="progress-bar-inner absolute h-full bg-symbol"
+          :style="'width:'+ progressStatus + '%'"
+        ></p>
+      </div> -->
+      <!-- <Icon name="simple-icons:googleforms" class="text-symbol w-6 h-6" /> -->
+
+      
       <div class="relative">
 
         <div v-if="isBGM">
@@ -92,20 +101,13 @@ const bgmHandler = () => {
           />
         </div>
       </div>
-
-      <div class="progress-bar w-6/12 h-3 relative bg-black border-symbol border-2 border-solid rounded-lg">
-        <p
-          class="progress-bar-inner absolute h-full bg-symbol"
-          :style="'width:'+ progressStatus + '%'"
-        ></p>
-      </div>
-
       <p
         class="w-4/12 font-neon text-symbol text-md sm:text-lg"
       >
-        <!-- {{ formStore.progress + 1 }} / {{ props.length }} -->
-        {{ progressStatus }} %
+        {{ formStore.progress }} / {{ props.length }}
       </p>
+
+      
     </div>
   </div>
 </template>
