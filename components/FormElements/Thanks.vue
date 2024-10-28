@@ -40,11 +40,11 @@
         </video>
       </div>
     </div> -->
-    <RetroTV
+    <!-- <RetroTV
       zoom="tv-zoom-out"
       noise="hidden"
       video="block"
-    />
+    /> -->
   </div>
 </template>
 
