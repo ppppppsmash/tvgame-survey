@@ -62,7 +62,7 @@ const checkHandler = (choice) => {
       >{{ props.label }}</h5>
     </label>
 
-    <div class="my-2 flex flex-wrap gap-4">
+    <div class="my-2 flex flex-wrap gap-x-3 gap-y-4">
       <label
         v-for="(choice, index) in props.options.choices"
         :key="index"
