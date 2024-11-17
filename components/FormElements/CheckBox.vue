@@ -47,7 +47,7 @@ const checkHandler = (choice) => {
       >{{ props.label }}</h5>
     </label>
 
-    <div class="my-8">
+    <div class="my-8 overflow-y-scroll sm:h-auto h-[280px]">
       <div
         v-for="(choice, index) in props.options.choices"
         :key="index"
