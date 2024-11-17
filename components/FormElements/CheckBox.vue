@@ -33,8 +33,6 @@ const checkHandler = (choice) => {
     return 'text-symbol'
   }
 }
-
-console.log(formStore.satisfaction)
 </script>
 
 <template>
