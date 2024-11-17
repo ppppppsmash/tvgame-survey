@@ -68,12 +68,12 @@ const checkHandler = (choice) => {
         :key="index"
         class="sm:my-2 mb-1 border border-symbol px-4 sm:py-2 group hover:bg-symbol
           sm:w-[140px] sm:h-[100px] flex flex-col justify-center items-center
-          w-[100px] h-[100px] transition-all duration-300 cursor-pointer relative"
+          w-[100px] h-[90px] transition-all duration-300 cursor-pointer relative"
         :class="checkHandler(choice)"
         @click="checkHandler(choice)"
       >
         <div
-          class="block relative mt-3 flex-col justify-center items-center text-center"
+          class="block relative sm:mt-3 flex-col justify-center items-center text-center"
         >
           <Icon
             :name="iconArray[index]"
