@@ -14,7 +14,6 @@ const propsValue = defineProps({
 const { props } = toRefs(propsValue)
 
 const progressStatus = computed(() => {
-  console.log(formStore.progress / props.value.length * 100)
   return formStore.progress / props.value.length * 100
 })
 
