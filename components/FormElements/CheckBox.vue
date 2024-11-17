@@ -40,11 +40,11 @@ console.log(formStore.satisfaction)
 <template>
   <div
     :class="isClick ? 'animate-slide-out-top' : ''"
-    class="animate-slide-in-bottom"
+    class="animate-slide-in-bottom sm:pl-24 w-full"
   >
     <label>
       <h5
-        class="animate-analog font-neon font-serif text-symbol text-md sm:text-xl font-extrabold leading-[2.5rem]"
+        class="animate-analog font-neon font-serif text-symbol text-md sm:text-xl font-extrabold sm:leading-[2.5rem] leading-none"
         :data-text="props.label"
       >{{ props.label }}</h5>
     </label>
@@ -53,7 +53,7 @@ console.log(formStore.satisfaction)
       <div
         v-for="(choice, index) in props.options.choices"
         :key="index"
-        class="my-2 border border-symbol px-4 py-2 group hover:bg-symbol transition-all duration-300 cursor-pointer"
+        class="mb-1 border border-symbol px-4 py-2 group hover:bg-symbol transition-all duration-300 cursor-pointer"
         :class="checkHandler(choice)"
         @click="checkHandler(choice)"
       >
