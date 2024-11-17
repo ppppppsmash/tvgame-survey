@@ -14,6 +14,11 @@
 
     <main class="relative z-50 sm:w-1/2 w-full sm:px-0 px-8">
       <slot />
+
+      <p
+        class="sm:fixed left-1/2 -translate-x-1/2 sm:block hidden bottom-2 text-symbol sm:text-sm font-extrabold font-neon"
+      >
+      <a href="https://kurosawa.fun" target="_blank">Created&nbsp;&nbsp;&nbsp;by&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="underline animate-pulse">Kurosawa</span></a></p>
     </main>
   </div>
 </template>
