@@ -20,7 +20,7 @@ export const formConfig = [
   },
   {
     type: 'checkbox',
-    label: '*どのゲームをプレイしたいですか？（複数可）',
+    label: '*どのゲームをプレイしたいですか？（複数可、スマホ時上下スクロール可）',
     name: 'entry.1328896341',
     buttonText: 'NEXT',
     options: {
